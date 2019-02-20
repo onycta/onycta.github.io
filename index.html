@@ -8,60 +8,91 @@
 </head>
 <body>
 	<main>
-		<section class="photo-badge">
-			<div class="test-bg"></div>
-			<div class="test-photo">
-				<!--<img src="files/test.jpg" alt="My photo" class="photo" width="150px" height="150px">-->
-			</div>
-			<h1>Testius Nameling</h1>
-			<p class="position">HTML/CSS developer</p>
-			<div class="social">
-				<img src="files/github.png" alt="GitHub" width="16px" height="16px">
-				<img src="files/linkedin.png" alt="LinkedIn" width="16px" height="16px">
-				<img src="files/facebook.png" alt="Facebook" width="16px" height="16px">
-				<img src="" alt="">
-			</div>
-		</section>
-		<section class="about-me">
-			<h2>About me</h2>
-			<p>Код абсурдно притягивает сублимированный гендер, независимо от психического состояния пациента. 
-			Поведенческая терапия социально отталкивает генезис, что вызвало развитие функционализма и сравнительно-психологических 
-			исследований поведения. Сознание осознаёт гомеостаз. Закон, согласно традиционным представлениям, аннигилирует 
-			социальный психоанализ.
-			</p>
-		</section>
-		<section class="portfolio">
-			<h2>Portfolio</h2>
-			<div class="portfolio-works">
-				<img src="files/item1.png" alt="Landing 1">
-				<img src="files/item2.png" alt="Landing 2">
-				<img src="files/item3.png" alt="Landing 3">
-			</div>
-		</section>
-		<section class="skills">
-			<div class="code-skills">
-				<h2>Skills</h2>
-				<p>HTML</p>
-				<p>CSS</p>
-				<p>JavaScript</p>
-				<p>Photoshop</p>
-			</div>
-			<div class="languages">
-				<h2>Languages</h2>
-				<p>Russian</p>
-				<p>English</p>
-				<p>French</p>
-			</div>
-		</section>
-		<footer>
-			<p>&copy; 2019 Testius Nameling</p>
-			<div class="social-footer">
-				<img src="files/github.png" alt="GitHub" width="16px" height="16px">
-				<img src="files/linkedin.png" alt="LinkedIn" width="16px" height="16px">
-				<img src="files/facebook.png" alt="Facebook" width="16px" height="16px">
-				<img src="" alt="">
-			</div>
-		</footer>
+		<div class="sidebar">
+			<section class="photo-badge">
+				<div class="test-bg"></div>
+				<div class="test-photo">
+					<!--<img src="files/test.jpg" alt="My photo" class="photo" width="150px" height="150px">-->
+				</div>
+				<h1>Testius Nameling</h1>
+				<p class="position">HTML/CSS developer</p>
+				<div class="social">
+					<img src="files/github.png" alt="GitHub" width="16px" height="16px">
+					<img src="files/linkedin.png" alt="LinkedIn" width="16px" height="16px">
+					<img src="files/facebook.png" alt="Facebook" width="16px" height="16px">
+					<img src="" alt="">
+				</div>
+				<ul class="about-cntacts">
+					<li>contact1</li>
+					<li>contact2</li>
+					<li>contact3</li>
+					<li>contact4</li>
+				</ul>
+			</section>
+			<section class="about-me">
+				<h2>About me</h2>
+				<p>Код абсурдно притягивает сублимированный гендер, независимо от психического состояния пациента. 
+				Поведенческая терапия социально отталкивает генезис, что вызвало развитие функционализма и сравнительно-психологических 
+				исследований поведения. Сознание осознаёт гомеостаз. Закон, согласно традиционным представлениям, аннигилирует 
+				социальный психоанализ.
+				</p>
+			</section>
+		</div>
+		<div class="main-info">
+			<section class="portfolio">
+				<h2>Portfolio</h2>
+				<div class="portfolio-works">
+					<img src="files/item1.png" alt="Landing 1">
+					<img src="files/item2.png" alt="Landing 2">
+					<img src="files/item3.png" alt="Landing 3">
+				</div>
+			</section>
+			<section class="skills">
+				<div class="code-skills">
+					<h2>Skills</h2>
+					<p>HTML</p>
+					<div class="skillbox">
+						<div class="skillbox html-filled"></div>
+					</div>
+					<p>CSS</p>
+					<div class="skillbox">
+						<div class="skillbox css-filled"></div>					
+					</div>
+					<p>JavaScript</p>
+					<div class="skillbox">
+						<div class="skillbox js-filled"></div>					
+					</div>
+					<p>Photoshop</p>
+					<div class="skillbox">
+						<div class="skillbox ps-filled"></div>					
+					</div>
+				</div>
+				<div class="languages">
+					<h2>Languages</h2>
+					<p>Russian</p>
+					<div class="skillbox">
+						<div class="skillbox ru-filled"></div>					
+					</div>
+					<p>English</p>
+					<div class="skillbox">
+						<div class="skillbox en-filled"></div>					
+					</div>
+					<p>French</p>
+					<div class="skillbox">
+						<div class="skillbox fr-filled"></div>					
+					</div>
+				</div>
+			</section>
+			<footer>
+				<p>&copy; 2019 Testius Nameling</p>
+				<div class="social-footer">
+					<img src="files/github-white.png" alt="GitHub" width="16px" height="16px">
+					<img src="files/linkedin-white.png" alt="LinkedIn" width="16px" height="16px">
+					<img src="files/facebook-white.png" alt="Facebook" width="16px" height="16px">
+					<img src="" alt="">
+				</div>
+			</footer>
+		</div>
 	</main>
 </body>
 </html>

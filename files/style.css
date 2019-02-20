@@ -1,6 +1,7 @@
 * {
 	padding:0;
 	margin: 0;
+	box-sizing: border-box;
 }
 body {
 	background: #f1f1f1;
@@ -16,10 +17,10 @@ main {
 	margin: 100px auto;
 }
 section, footer {
-	margin: 15px;
+	margin: 0 8px 16px;
 	padding: 30px;
 
-	border-radius: 8px;
+	/* border-radius: 8px; */
 	box-shadow: 0 0 10px #a1a1a1;
 }
 section{
@@ -34,6 +35,7 @@ footer {
 }
 
 /*------------Временные стили и стили заглушек--------*/
+
 .test-bg {
 	width: 100%;
 	height: 325px;
@@ -47,4 +49,34 @@ footer {
 	border: 3px white solid;
 	border-radius: 50%;
 	background-color: darkcyan;
+}
+.code-skills, .languages {
+	border: 1px dotted grey;
+}
+.sidebar {
+	width: 33.3%;
+	float: left;
+}
+.main-info {
+	width: 66.7%;
+	float: left;
+}
+.portfolio-works, .skills{
+	display: flex;
+}
+.skills div {
+	flex: 1;
+}
+.portfolio-works > img {
+	margin: 8px;
+	border: 1px solid lightgray;
+}
+.skillbox {
+	height: 10px;
+	background: lightgray;
+	border-radius: 10px;
+}
+.html-filled {
+	width: 80%;
+	background: darkcyan;
 }
