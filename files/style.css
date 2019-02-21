@@ -11,11 +11,13 @@ body {
 	*/
 	font-family: 'Roboto', 'Georgia', serif;
 	font-size: 14px;
+	padding: 15px; /*Чтобы при скачках размеров было красиво*/
 }
 main {
 	max-width: 1400px;
-	margin: 100px auto;
+	margin: 0 auto;
 }
+/*возможно этот паддинг нужно сделать отдельной строкой*/
 section, footer {
 	margin: 0 8px 16px;
 	padding: 30px;
@@ -35,7 +37,14 @@ footer {
 }
 
 /*------------Временные стили и стили заглушек--------*/
-
+.about-badge {
+	padding: 0;
+}
+.badge-description {
+	padding: 30px;
+	margin: 0 auto;
+	text-align: center; 
+}
 .test-bg {
 	width: 100%;
 	height: 325px;
@@ -63,12 +72,18 @@ footer {
 }
 .portfolio-works, .skills{
 	display: flex;
+	flex-flow: row wrap;
 }
-.skills div {
+.skills > div {
+	margin-right: 15px;
 	flex: 1;
+	justify-content: space-between;
 }
 .portfolio-works > img {
+	width: 265px;
+	height: 475px;
 	margin: 8px;
+	flex: 1 1;
 	border: 1px solid lightgray;
 }
 .skillbox {
