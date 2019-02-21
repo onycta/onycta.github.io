@@ -22,8 +22,8 @@ section, footer {
 	margin: 0 8px 16px;
 	padding: 30px;
 
-	/* border-radius: 8px; */
-	box-shadow: 0 0 10px #a1a1a1;
+	border-radius: 4px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 section{
 	background-color: #fff;
@@ -38,29 +38,43 @@ footer {
 
 /*------------Временные стили и стили заглушек--------*/
 .about-badge {
-	padding: 0;
-}
-.badge-description {
-	padding: 30px;
-	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	padding-top: 200px;
 	text-align: center; 
 }
-.test-bg {
+.badge-description {
+	/* padding: 30px; */
+	margin: 0 auto;
+}
+.badge-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 325px;
 	
 	background-color: grey;
 }
-.test-photo {
-	width: 150px;
-	height: 150px;
-	margin: 10px auto;
-	border: 3px white solid;
+.photo {
+	display: block;
+	position: relative;
+   /* 	width: 150px;
+	height: 150px; */
+	margin: 0 auto 10px;
+	border: 5px white solid;
 	border-radius: 50%;
 	background-color: darkcyan;
 }
-.code-skills, .languages {
+
+/* .code-skills, .languages {
 	border: 1px dotted grey;
+} */
+.code-skills {
+	padding-right: 15px;
+}
+.languages {
+	padding-left: 15px;
 }
 .sidebar {
 	width: 33.3%;
@@ -79,12 +93,34 @@ footer {
 	flex: 1;
 	justify-content: space-between;
 }
-.portfolio-works > img {
+.item {
+	position: relative;
+	
 	width: 265px;
 	height: 475px;
 	margin: 8px;
 	flex: 1 1;
+	overflow: hidden;
+	
 	border: 1px solid lightgray;
+
+}
+.item-image {
+	width: 100%;
+	height: auto; /*нужно чтобы не перефигачивал пропорции картинки*/
+}
+.description {
+	position: absolute;
+	top: 90%; /*высота строки плюс отступы!*/
+	padding: 15px;
+	background-color: white;
+	transition: top 0.3s;
+	
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+.item:hover .description {
+	top: 60%;
+	transition: top 0.7s;
 }
 .skillbox {
 	height: 10px;
