@@ -9,9 +9,16 @@ body {
 	Шрифты специально с засечками, чтобы было видно, если где упадет нужный.
 	Не забыть заменить на ариал и без засечек!
 	*/
-	font-family: 'Roboto', 'Georgia', serif;
+	font-family: 'Roboto', 'Arial', sans-serif;
 	font-size: 14px;
 	padding: 15px; /*Чтобы при скачках размеров было красиво*/
+}
+p {
+	margin: 8px 0;
+	line-height: 1.5em;
+	/* color: #8f8f8f; */
+	color: #646464;
+	font-weight: 300;
 }
 main {
 	max-width: 1400px;
@@ -35,8 +42,49 @@ footer {
 	background: #1e1e1e;
 	color: white; /*временно*/
 }
+h1, h2 {
+	color: #171717;
+}
+h1 {
+	font-weight: 300;
+	font-size: 24px;
+	/* text-transform: uppercase; */
+}
+h2 {
+/* 	background: rgba(82, 191, 0, 0.1);
+ */	display: block;
+	padding: 3px;
+	border-radius: 5px;
+	/* display: inline-block; */
+	/*включить если непременно нужно сделать длиной в заголовок*/
+	font-weight: regular;
+/* 	text-transform: uppercase;
+ */}
+h2::after {
+	content: '';
+	display: block;
+	width: 100%;
+	margin-top: 5px;
+	border-bottom: 1px solid #52bf00;
+	opacity: 0.5;
+}
+h3 {
+	font-weight: regular;
+}
 
-/*------------Временные стили и стили заглушек--------*/
+/*----------Классы и отдельные зоны------------*/
+
+.sidebar {
+	width: 33.3%;
+	float: left;
+}
+.main-info {
+	width: 66.7%;
+	float: left;
+}
+
+/*---------------Бейдж-----------------*/
+
 .about-badge {
 	position: relative;
 	overflow: hidden;
@@ -46,6 +94,9 @@ footer {
 .badge-description {
 	/* padding: 30px; */
 	margin: 0 auto;
+	
+	position: relative;
+	z-index: 100;
 }
 .badge-bg {
 	position: absolute;
@@ -54,7 +105,17 @@ footer {
 	width: 100%;
 	height: 325px;
 	
-	background-color: grey;
+	background: grey; /*тут картинку сделать*/
+}
+.badge-bg::before{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 200px;
+	top: 70%;
+	background-color: red;
+	transform: skew(0deg, 10deg);
 }
 .photo {
 	display: block;
@@ -64,35 +125,21 @@ footer {
 	margin: 0 auto 10px;
 	border: 5px white solid;
 	border-radius: 50%;
-	background-color: darkcyan;
+}
+.position {
+	color: #52bf00;
 }
 
-/* .code-skills, .languages {
-	border: 1px dotted grey;
-} */
-.code-skills {
-	padding-right: 15px;
-}
-.languages {
-	padding-left: 15px;
-}
-.sidebar {
-	width: 33.3%;
-	float: left;
-}
-.main-info {
-	width: 66.7%;
-	float: left;
-}
+/*---------------------Портфолио------------------------*/
+
 .portfolio-works, .skills{
 	display: flex;
 	flex-flow: row wrap;
 }
-.skills > div {
-	margin-right: 15px;
-	flex: 1;
-	justify-content: space-between;
+.portfolio-works {
+	padding-top: 15px;
 }
+
 .item {
 	position: relative;
 	
@@ -122,12 +169,30 @@ footer {
 	top: 60%;
 	transition: top 0.7s;
 }
+
+/*-------------------Блок навыков------------------------*/
+
+/* .code-skills, .languages {
+	border: 1px dotted grey;
+} */
+.code-skills {
+	padding-right: 15px;
+}
+.languages {
+	padding-left: 15px;
+}
+.skills > div {
+	margin-right: 15px;
+	flex: 1;
+	justify-content: space-between;
+}
 .skillbox {
 	height: 10px;
-	background: lightgray;
+	background: #f1f1f1;
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);	
 	border-radius: 10px;
 }
-.html-filled {
-	width: 80%;
-	background: darkcyan;
+.html-filled, .css-filled, .js-filled, .ps-filled, .ru-filled, .en-filled, .fr-filled {
+	width: 80%; /*потом разбить на разные*/
+	background: #52bf00;
 }
