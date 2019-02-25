@@ -187,7 +187,7 @@ h2, h3 {
 	width: 265px;
 	height: 475px;
 	margin: 8px;
-	flex: 1 1 200px;
+	flex: 1 1 250px;
 	overflow: hidden;
 	
 	border: 1px solid lightgray;
@@ -200,6 +200,7 @@ h2, h3 {
 .description {
 	position: absolute;
 	top: 90%; /*высота строки плюс отступы!*/
+	width: 100%;
 	padding: 15px;
 	background-color: white;
 	transition: top 0.3s;
