@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="128" height="50" viewBox="0 0 128 50">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#gradient-overlay-1);
+      }
+
+      .cls-1, .cls-2 {
+        font-size: 30px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        text-anchor: middle;
+        font-family: "Roboto-Thin";
+      }
+    </style>
+
+    <filter id="gradient-overlay-1" filterUnits="userSpaceOnUse">
+      <feImage x="55" y="11" width="73" height="29" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNzMiIGhlaWdodD0iMjkiPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHkxPSIxNC41IiB4Mj0iNzMiIHkyPSIxNC41Ij4KICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwMGUwZDAiLz4KICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM0YWEzY2MiLz4KPC9saW5lYXJHcmFkaWVudD4KPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIvPjwvc3ZnPg=="/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+  </defs>
+  <g>
+    <image xlink:href="data:img/png;base64,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" width="44" height="50"/>
+    <text x="92" y="34" class="cls-1"><tspan class="cls-2">tajam</tspan></text>
+  </g>
+</svg>
