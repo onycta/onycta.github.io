@@ -17,8 +17,84 @@ body {
 a {
 	text-decoration: none;
 }
+h1, h2 {
+	font-family: "Playfair Display", "Georgia", serif;
+}
+h1 {
+	font-size: 32px;
+	font-weight: 900;
+}
+h2 {
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.container {
+	width: 960px;
+}
+
+/*------Шапка и приветсвие-------*/
+
+.welcome {
+	color: #fff;
+	background: url("header-bg.jpg") #403268 no-repeat;
+}
 .main-navigation {
 	font-family: "Roboto Black", "Arial", sans-serif;
 	font-size: 13px;
 	text-transform: uppercase;
+}
+.main-navigation .sitenav {
+	float:right;
+}
+.main-navigation li {
+	display: inline-block;
+}
+.main-navigation a {
+	color: #fff;
+}
+.main-navigation a:hover, 
+.main-navigation a:focus,
+.main-navigation a:active {
+	color: #00e0d0;
+}
+
+/*------------О нас (история и видеоблок)-------------*/
+.our-story {
+	background-color: #fff;
+}
+
+.story-video {
+	color: #fff;
+	background: url("about-bg.jpg") #403268 no-repeat;
+}
+
+.expertise {
+	background-color: #fff;
+}
+
+.our-team {
+	color: #fff;
+	background: url("team-bg.jpg") #403268 no-repeat;
+}
+
+.our-works {
+	background-color: #fff;
+}
+
+.testimonials {
+	color: #fff;
+	background: url("testimonials-bg.jpg") #403268 no-repeat;
+}
+
+.contact-clients {
+	background-color: #fff;
+}
+
+.main-footer {
+	color: #fff;
+	background: url("footer-bg.jpg") #403268 no-repeat;
+}
+.main-footer a{
+	color: #fff;
 }
