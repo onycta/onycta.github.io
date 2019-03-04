@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+
+body {
+	font-family: "Roboto Light", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 22px;
+	color: #413d4b;
+	
+	background-color: #fff;
+}
+a {
+	text-decoration: none;
+}
+.main-navigation {
+	font-family: "Roboto Black", "Arial", sans-serif;
+	font-size: 13px;
+	text-transform: uppercase;
+}

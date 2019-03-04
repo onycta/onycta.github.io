@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Tajam Design</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="files/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Playfair+Display:400,700,900|Roboto:300,900" rel="stylesheet"> 
 	<!-- Шрифты: 
 			roboto light
 			roboto black
@@ -11,6 +12,15 @@
 			playfair display bold
 			playfair display regular
 			hammersmith one regular
+			
+
+    font-family: 'Roboto', sans-serif;
+
+    font-family: 'Playfair Display', serif;
+
+    font-family: 'Hammersmith One', sans-serif;
+
+
 	
 	
 	-->
@@ -30,57 +40,64 @@
 			</ul>
 		</nav>
 	</header>
-	<main>
-		<div class="welcome">
+	<main class="container">
+		<section class="welcome">
 			<h1>We are awesome creative agency</h1>
 			<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
 			<a href="#" class="btn">Learn more</a>
-		</div>
-		<div class="our-story">
-			<img src="files/logo-big.png" alt="Our big and awesome logo" class="our-story-logo"><!--может фоном?...-->
+			<!-- звездочки заменить на точки (сейчас лень) -->
+			<nav class="slider-nav">
+				<button class="slider-dot slider-dot-active">*</button>
+				<button class="slider-dot">*</button>
+				<button class="slider-dot">*</button>
+				<button class="slider-dot">*</button>
+			</nav>
+		</section>
+		<section class="our-story">
+			<img src="files/logo-big.png" alt="Our big and awesome logo" class="our-story-logo">
 			<div class="our-story-description">
 				<h2>Our story</h2>
 				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus
 					Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
 				<a href="#" class="btn">Learn more</a>
 			</div>
-		</div>
-		<div class="story-video">
+		</section>
+		<section class="story-video">
 <!--Вставить видео или заготовку для видео-->
 			<img src="files/play-icon.png" alt="Play video about us">
 			<p>Watch our story</p>
-		</div>
-		<div class="expertise">
+		</section>
+		<section class="expertise">
 			<h2>Expertise</h2>
 			<p>Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
-			<ul>
-				<li>
-					<strong>WEB DESIGN & DEVELOPMENT</strong>
+			<ul class="features-list">
+				<li class="feature-item">
+					<h3>WEB DESIGN & DEVELOPMENT</h3>
 					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
 				</li>
-				<li>
-					<strong>BRANDING IDENTITY</strong>
+				<li class="feature-item">
+					<h3>BRANDING IDENTITY</h3>
 					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
 				</li>
-				<li>
-					<strong>MOBILE APP</strong>
+				<li class="feature-item">
+					<h3>MOBILE APP</h3>
 					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
 				</li>
-				<li>
-					<strong>SEARCH ENGINE OPTIMIZATION</strong>
+				<li class="feature-item">
+					<h3>SEARCH ENGINE OPTIMIZATION</h3>
 					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
 				</li>
-				<li>
-					<strong>GAME DEVELOPMENT</strong>
+				<li class="feature-item">
+					<h3>GAME DEVELOPMENT</h3>
 					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
 				</li>
-				<li>
-					<strong>MADE WITH LOVE</strong>
+				<li class="feature-item">
+					<h3>MADE WITH LOVE</h3>
 					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
 				</li>
 			</ul>
-		</div>
-		<div class="our-team">
+		</section>
+		<section class="our-team">
 			<h2>Meet our amazing team</h2>
 			<p>Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
 			<div class="team-member">
@@ -104,16 +121,16 @@
 				<p class="team-member-position">Employed</p>
 			</div>
 			<p>Become part of our dream team, let’s join us !</p>
-			<a href="#">We are hiring</a>
-		</div>
-		<div class="our-works">
+			<a href="#" class="btn">We are hiring</a>
+		</section>
+		<section class="our-works">
 			<h2>Our works</h2>
 			<div class="works-gallery"></div>
 			<a href="#">See All Projects in dribbble</a>
 			<button>Load more</button>
-		</div>
-		<div class="testimonials">
-			<h2>Testimonials</h2>
+		</section>
+		<section class="testimonials">
+			<h2 class="visually-hidden">Testimonials</h2>
 			<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
 			<p class="testimonials-client-name">JANE GALADRIEL</p>
 			<p class="testimonials-client-position">CEO TENGKUREP</p>
@@ -122,68 +139,69 @@
 			<img src="files/photo3.jpg" alt="Photo of client">
 			<img src="files/photo4.jpg" alt="Photo of client">
 			<img src="files/photo5.jpg" alt="Photo of client">
-		</div>
-		<div class="contact-clients">
+			<button class="testimonials-prev">*</button>
+			<button class="testimonials-next">*</button>
+		</section>
+		<section class="contact-clients">
 			<div class="contact-form">
 				<h2>Give us a good news</h2>
-				<form action="" class="contact-form">
-					<input type="text" id="form-name" name="name" value="Name">
-					<input type="e-mail" id="form-email" name="email" value="Email">
-					<input type="text" id="form-subject" name="subject" value="Subject">
-					<textarea id="form-message" name="subject" placeholder="Your Message" rows="5"></textarea>
+				<form class="contact-form" method="post">
+					<label class="visually-hidden">Your name:<input type="text" id="form-name" name="name" placeholder="Name"></label>
+					<label class="visually-hidden">E-mail:<input type="email" id="form-email" name="email" placeholder="Email"></label>
+					<label class="visually-hidden">Subject:<input type="text" id="form-subject" name="subject" placeholder="Subject"></label>
+					<label class="visually-hidden">Your message:<textarea id="form-message" name="subject" placeholder="Your Message" rows="5"></textarea></label>
 				</form>
 			</div>
 			<div class="our-clients">
 				<h2>Our happy clients</h2>
-				<ul>
-					<li><img src="files/zara.png" alt=""></li>
-					<li><img src="files/barneys-newyork.png" alt=""></li>
-					<li><img src="files/calvin-klein.png" alt=""></li>
-					<li><img src="files/converse.png" alt=""></li>
-					<li><img src="files/levis.png" alt=""></li>
-					<li><img src="files/mango.png" alt=""></li>
-					<li><img src="files/gucci.png" alt=""></li>
-					<li><img src="files/nike.png" alt=""></li>
-					<li><img src="files/puma.png" alt=""></li>
-					<li><img src="files/billabong.png" alt=""></li>
+				<ul class="clients-list">
+					<li class="client-name"><img src="files/zara.png" alt=""></li>
+					<li class="client-name"><img src="files/barneys-newyork.png" alt="Barneys New York"></li>
+					<li class="client-name"><img src="files/calvin-klein.png" alt="Calvin Klein"></li>
+					<li class="client-name"><img src="files/converse.png" alt="Converse"></li>
+					<li class="client-name"><img src="files/levis.png" alt="Levi's"></li>
+					<li class="client-name"><img src="files/mango.png" alt="Mango"></li>
+					<li class="client-name"><img src="files/gucci.png" alt="Gucci"></li>
+					<li class="client-name"><img src="files/nike.png" alt="Nike"></li>
+					<li class="client-name"><img src="files/puma.png" alt="Puma"></li>
+					<li class="client-name"><img src="files/billabong.png" alt="Billabong"></li>
 				</ul>
 			</div>
-			<footer class="main-footer">
-				<div class="footer-about">
-					<img src="files/logo.svg" alt="Our awesome logo again" class="footer-logo">
-					<p class="footer-about">lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit</p>
-				</div>
-				<div class="footer-contacts">
-					<h3>Our studio</h3>
-					<p class="footer-address">Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat 11480 - Indonesia</p>
-					<p class="footer-phone">(+62) 21-2224 3333</p>
-				</div>
-				<div class="footer-social">
-					<h3>Stay in touch</h3>
-					<form action="" class="subscribe">
-						<input type="e-mail" id="subscribe-email" name="subscribe-email" value="Subscribe our newsletter">
-						<input type="submit" value="Subscribe">
-					</form>
-					<ul class="footer-social-icons">
-						<li><img src="files/facebook.png" alt="Our Facebook"></li>
-						<li><img src="files/twitter.png" alt="Our Twitter"></li>
-						<li><img src="files/dribbble.png" alt="Our Dribbble"></li>
-						<li><img src="files/instagram.png" alt="Our Instagram"></li>
-						<li><img src="files/gplus.png" alt="Find us on google plus if you can"></li>
-						<li><img src="files/youtube.png" alt="Our youtube channel"></li>
-					</ul>
-				</div>
-				<nav class="footer-nav">
-					<ul class="legal-info">
-						<li><a href="#">Help</a></li>
-						<li><a href="#">Terms & Conditions</a></li>
-						<li><a href="#">Privacy</a></li>
-					</ul>
-				</nav>
-				<p class="copyright">Copyright &copy; 2015 - Tajem Creative</p>
-			</footer>
-		</div>
+		</section>
 	</main>
-	
+	<footer class="main-footer">
+		<div class="footer-about">
+			<img src="files/logo.svg" alt="Our awesome logo again" class="footer-logo">
+			<p class="footer-about">lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit</p>
+		</div>
+		<div class="footer-contacts">
+			<h3>Our studio</h3>
+			<p class="footer-address">Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat 11480 - Indonesia</p>
+			<p class="footer-phone">(+62) 21-2224 3333</p>
+		</div>
+		<div class="footer-social">
+			<h3>Stay in touch</h3>
+			<form class="subscribe" method="post">
+				<label class="visually-hidden">E-mail for subscription<input type="email" id="subscribe-email" name="subscribe-email" placeholder="Subscribe our newsletter"></label>
+				<input type="submit" value="Subscribe">
+			</form>
+			<ul>
+				<li class="social-icon"><img src="files/facebook.png" alt="Our Facebook"></li>
+				<li class="social-icon"><img src="files/twitter.png" alt="Our Twitter"></li>
+				<li class="social-icon"><img src="files/dribbble.png" alt="Our Dribbble"></li>
+				<li class="social-icon"><img src="files/instagram.png" alt="Our Instagram"></li>
+				<li class="social-icon"><img src="files/gplus.png" alt="Find us on google plus if you can"></li>
+				<li class="social-icon"><img src="files/youtube.png" alt="Our youtube channel"></li>
+			</ul>
+		</div>
+		<nav class="footer-nav">
+			<ul class="legal-info">
+				<li><a href="#">Help</a></li>
+				<li><a href="#">Terms & Conditions</a></li>
+				<li><a href="#">Privacy</a></li>
+			</ul>
+		</nav>
+		<p class="copyright">Copyright &copy; 2015 - Tajem Creative</p>
+	</footer>
 </body>
 </html>
