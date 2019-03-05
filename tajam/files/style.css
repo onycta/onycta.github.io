@@ -32,6 +32,15 @@ h2 {
 .container {
 	width: 960px;
 }
+a.btn {
+	padding: 5px; 
+	font-family: "Hammersmith One", "Arial", sans-serif;
+	text-transform: uppercase;
+	color: #00e0d0;
+	
+	border: 1px #00e0d0 solid;
+	border-radius: 3px;
+}
 
 /*------Шапка и приветсвие-------*/
 
@@ -58,10 +67,29 @@ h2 {
 .main-navigation a:active {
 	color: #00e0d0;
 }
+.slider-dot {
+	width: 10px;
+	height: 10px;
+	border: 1px white solid;
+	border-radius: 50%;
+	
+	background-color: rgba(0,0,0,0);
+	
+	cursor: pointer;/*убрать когда поставлю ссылки. Может быть.*/
+}
+.slider-dot-active {
+	background-color: #00e0d0;
+	border-color: #00e0d0;
+}
+
 
 /*------------О нас (история и видеоблок)-------------*/
+
 .our-story {
 	background-color: #fff;
+}
+.our-story img{
+	float: left;
 }
 
 .story-video {
