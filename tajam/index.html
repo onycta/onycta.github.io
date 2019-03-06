@@ -28,19 +28,20 @@
 <body>
 	<main>
 		<section class="welcome">
+			<nav class="main-navigation">
+				<img src="files/logo.png" alt="Our awesome logo" width="128" height="50" class="logo">
+				<ul class="sitenav">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Expertise</a></li>
+					<li><a href="#">Team</a></li>
+					<li><a href="#">Works</a></li>
+					<li><a href="#">People say</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
 			<div class="container">
-				<nav class="main-navigation">
-					<img src="files/logo.svg" alt="Our awesome logo" class="logo">
-					<ul class="sitenav">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Expertise</a></li>
-						<li><a href="#">Team</a></li>
-						<li><a href="#">Works</a></li>
-						<li><a href="#">People say</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
-				</nav>
+				
 				<h1>We are awesome creative agency</h1>
 				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
 				<a href="#" class="btn">Learn more</a>
@@ -55,11 +56,13 @@
 		</section>
 		<section class="our-story">
 			<div class="container">
-				<img src="files/logo-big.svg" alt="Our big and awesome logo" class="our-story-logo">
+				<div class="our-story-logo">
+					<img src="files/logo-big.svg" alt="Our big and awesome logo" width="240" height="230">
+				</div>
 				<div class="our-story-description">
 					<h2>Our story</h2>
-					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus
-						Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus.</p>
+					<p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
 					<a href="#" class="btn">Learn more</a>
 				</div>
 			</div>
@@ -67,36 +70,38 @@
 		<section class="story-video">
 			<div class="container">
 				<!--Вставить видео или заготовку для видео-->
-				<img src="files/play-icon.png" alt="Play video about us">
-				<p>Watch our story</p>
+				<button class="play-video">
+					<img src="files/play-icon.png" alt="Play video about us">
+					<span>Watch our story</span>
+				</button>
 			</div>
 		</section>
 		<section class="expertise">
 			<div class="container">
 				<h2>Expertise</h2>
-				<p>Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
+				<p class="section-intro">Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
 				<ul class="features-list">
-					<li class="feature-item">
+					<li class="feature-item webdesign">
 						<h3>WEB DESIGN & DEVELOPMENT</h3>
 						<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
 					</li>
-					<li class="feature-item">
+					<li class="feature-item branding">
 						<h3>BRANDING IDENTITY</h3>
 						<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
 					</li>
-					<li class="feature-item">
+					<li class="feature-item mobile">
 						<h3>MOBILE APP</h3>
 						<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
 					</li>
-					<li class="feature-item">
+					<li class="feature-item seo">
 						<h3>SEARCH ENGINE OPTIMIZATION</h3>
 						<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
 					</li>
-					<li class="feature-item">
+					<li class="feature-item gamedev">
 						<h3>GAME DEVELOPMENT</h3>
 						<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
 					</li>
-					<li class="feature-item">
+					<li class="feature-item love">
 						<h3>MADE WITH LOVE</h3>
 						<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
 					</li>
@@ -106,52 +111,107 @@
 		<section class="our-team">
 			<div class="container">
 				<h2>Meet our amazing team</h2>
-				<p>Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
-				<div class="team-member">
-					<img src="files/name-filler.jpg" alt="Member photo">
-					<p class="team-member-name">Name Namius</p>
-					<p class="team-member-position">Employed</p>
+				<p class="section-intro">Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
+				<div class="team-container">
+					<div class="team-member">
+						<div class="member-photo">
+							<img src="files/photo-filler.jpg" alt="Member photo">
+						</div>
+						<div class="member-description">
+							<p class="team-member-name">Name Namius</p>
+							<p class="team-member-position">Employed</p>
+						</div>
+					</div>
+					<div class="team-member">
+						<div class="member-photo">
+							<img src="files/photo-filler.jpg" alt="Member photo">
+						</div>
+						<div class="member-description">
+							<p class="team-member-name">Name Namius</p>
+							<p class="team-member-position">Employed</p>
+						</div>
+					</div>
+					<div class="team-member">
+						<div class="member-photo">
+							<img src="files/photo-filler.jpg" alt="Member photo">
+						</div>
+						<div class="member-description">
+							<p class="team-member-name">Name Namius</p>
+							<p class="team-member-position">Employed</p>
+						</div>
+					</div>
+					<div class="team-member">
+						<div class="member-photo">
+							<img src="files/photo-filler.jpg" alt="Member photo">
+						</div>
+						<div class="member-description">
+							<p class="team-member-name">Name Namius</p>
+							<p class="team-member-position">Employed</p>
+						</div>
+					</div>
 				</div>
-				<div class="team-member">
-					<img src="files/name-filler.jpg" alt="Member photo">
-					<p class="team-member-name">Name Namius</p>
-					<p class="team-member-position">Employed</p>
-				</div>
-				<div class="team-member">
-					<img src="files/name-filler.jpg" alt="Member photo">
-					<p class="team-member-name">Name Namius</p>
-					<p class="team-member-position">Employed</p>
-				</div>
-				<div class="team-member">
-					<img src="files/name-filler.jpg" alt="Member photo">
-					<p class="team-member-name">Name Namius</p>
-					<p class="team-member-position">Employed</p>
-				</div>
-				<p>Become part of our dream team, let’s join us !</p>
+				<p class="team-join">Become part of our dream team, let’s join us !</p>
 				<a href="#" class="btn">We are hiring</a>
 			</div>
 		</section>
 		<section class="our-works">
 			<div class="container">
 				<h2>Our works</h2>
-				<div class="works-gallery"></div>
 				<a href="#">See All Projects in dribbble</a>
-				<button>Load more</button>
+				<button class="load-more">Load more</button>
+				<div class="works-gallery">
+					<div class="gallery-item">
+						<img src="https://picsum.photos/270/200?random" alt="Work example">
+					</div>
+					<div class="gallery-item">
+						<img src="https://picsum.photos/270/200?random" alt="Work example">
+					</div>
+					<div class="gallery-item">
+						<img src="https://picsum.photos/270/200?random" alt="Work example">
+					</div>
+					<div class="gallery-item">
+						<img src="https://picsum.photos/270/200?random" alt="Work example">
+					</div>
+					<div class="gallery-item">
+						<img src="https://picsum.photos/270/200?random" alt="Work example">
+					</div>
+					<div class="gallery-item">
+						<img src="https://picsum.photos/270/200?random" alt="Work example">
+					</div>
+					<div class="gallery-item">
+						<img src="https://picsum.photos/270/200?random" alt="Work example">
+					</div>
+					<div class="gallery-item">
+						<img src="https://picsum.photos/270/200?random" alt="Work example">
+					</div>
+					<div class="gallery-item">
+						<img src="https://picsum.photos/270/200?random" alt="Work example">
+					</div>
+					<div class="gallery-item">
+						<img src="https://picsum.photos/270/200?random" alt="Work example">
+					</div>
+					<div class="gallery-item">
+						<img src="https://picsum.photos/270/200?random" alt="Work example">
+					</div>
+					<div class="gallery-item">
+						<img src="https://picsum.photos/270/200?random" alt="Work example">
+					</div>
+				</div>
 			</div>
 		</section>
 		<section class="testimonials">
 			<div class="container">
 				<h2 class="visually-hidden">Testimonials</h2>
-				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
+				<p class="testimonial">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
 				<p class="testimonials-client-name">JANE GALADRIEL</p>
 				<p class="testimonials-client-position">CEO TENGKUREP</p>
-				<img src="files/photo1.jpg" alt="Photo of client">
-				<img src="files/photo2.jpg" alt="Photo of client">
-				<img src="files/photo3.jpg" alt="Photo of client">
-				<img src="files/photo4.jpg" alt="Photo of client">
-				<img src="files/photo5.jpg" alt="Photo of client">
-				<button class="testimonials-prev">*</button>
-				<button class="testimonials-next">*</button>
+				<button class="testimonials-prev">&lt;</button>
+				<img src="files/photo1.jpg" alt="Photo of client" class="testimonials-client-photo">
+				<img src="files/photo2.jpg" alt="Photo of client" class="testimonials-client-photo">
+				<img src="files/photo3.jpg" alt="Photo of client" class="testimonials-client-photo testimonials-current">
+				<img src="files/photo4.jpg" alt="Photo of client" class="testimonials-client-photo">
+				<img src="files/photo5.jpg" alt="Photo of client" class="testimonials-client-photo">
+				<button class="testimonials-next">&gt;</button>
 			</div>
 		</section>
 		<section class="contact-clients">
@@ -159,10 +219,14 @@
 				<div class="contact-form">
 					<h2>Give us a good news</h2>
 					<form class="contact-form" method="post">
-						<label class="visually-hidden">Your name:<input type="text" id="form-name" name="name" placeholder="Name"></label>
-						<label class="visually-hidden">E-mail:<input type="email" id="form-email" name="email" placeholder="Email"></label>
-						<label class="visually-hidden">Subject:<input type="text" id="form-subject" name="subject" placeholder="Subject"></label>
-						<label class="visually-hidden">Your message:<textarea id="form-message" name="subject" placeholder="Your Message" rows="5"></textarea></label>
+						<label for="form-name" class="visually-hidden">Your name:</label>
+						<input type="text" id="form-name" name="name" placeholder="Name">
+						<label for="form-email" class="visually-hidden">E-mail:</label>
+						<input type="email" id="form-email" name="email" placeholder="Email">
+						<label for="form-subject" class="visually-hidden">Subject:</label>
+						<input type="text" id="form-subject" name="subject" placeholder="Subject">
+						<label for="form-message" class="visually-hidden">Your message:</label>
+						<textarea id="form-message" name="subject" placeholder="Your Message" rows="5"></textarea>
 					</form>
 				</div>
 				<div class="our-clients">

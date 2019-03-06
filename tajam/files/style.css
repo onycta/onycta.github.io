@@ -7,10 +7,11 @@ li {
 }
 
 body {
-	font-family: "Roboto Light", "Arial", sans-serif;
+	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 14px;
+	font-weight: 300;
 	line-height: 22px;
-	color: #413d4b;
+	color: #666666;
 	
 	background-color: #fff;
 }
@@ -21,51 +22,100 @@ h1, h2 {
 	font-family: "Playfair Display", "Georgia", serif;
 }
 h1 {
+	margin: 95px auto 30px;
+	
 	font-size: 32px;
 	font-weight: 900;
+}
+h1::after {
+	content: "";
+	display: block;
+	width: 52px;
+	margin: 30px auto;
+	border-bottom: 1px #00e0d0 solid;
 }
 h2 {
 	font-size: 22px;
 	font-weight: 700;
+	text-transform: uppercase;
 }
-
-.container {
+h3 {
+	font-family: "Roboto", "Arial", sans-serif;
+	font-weight: 900;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+section{
+	background-position: top center;
+}
+.container, 
+.main-navigation {
 	width: 960px;
+	padding: 10px;
+	margin: 0 auto;
+}
+.container {
+	padding-top: 70px;
+	padding-bottom: 70px;
 }
 a.btn {
-	padding: 5px; 
+	width: 120px;
+	height: 40px;
+	padding: 13px 15px;
+	
 	font-family: "Hammersmith One", "Arial", sans-serif;
+	font-size: 16px;
 	text-transform: uppercase;
 	color: #00e0d0;
 	
 	border: 1px #00e0d0 solid;
 	border-radius: 3px;
 }
+a.btn:hover,
+a.btn:focus,
+a.btn:active { /*!!*/
+	color: #46a3cc;
+	border: 2px #46a3cc solid;
+}
 
-/*------Шапка и приветсвие-------*/
+/*------Шапка и приветствие-------*/
 
 .welcome {
+	text-align: center;
 	color: #fff;
-	background: url("header-bg.jpg") #403268 no-repeat;
+	background: url("header-bg.jpg") #403268 no-repeat top center;
+}
+.welcome p {
+	width: 780px;
+	margin: 0 auto 50px ;
+	padding: 0 10px;
+	
+	line-height: 24px;
 }
 .main-navigation {
-	font-family: "Roboto Black", "Arial", sans-serif;
+	display: flex;
+	justify-content: space-between;
+	
+	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 13px;
+	font-weight: 900;
 	text-transform: uppercase;
-}
-.main-navigation .sitenav {
-	float:right;
 }
 .main-navigation li {
 	display: inline-block;
+	margin: 15px 10px;
 }
 .main-navigation a {
 	color: #fff;
+	letter-spacing: 1px;/*???*/
 }
 .main-navigation a:hover, 
 .main-navigation a:focus,
 .main-navigation a:active {
 	color: #00e0d0;
+}
+.slider-nav {
+	margin-top: 130px;
 }
 .slider-dot {
 	width: 10px;
@@ -77,6 +127,9 @@ a.btn {
 	
 	cursor: pointer;/*убрать когда поставлю ссылки. Может быть.*/
 }
+.slider-dot:hover{
+	border: 2px #46a3cc solid;
+}
 .slider-dot-active {
 	background-color: #00e0d0;
 	border-color: #00e0d0;
@@ -85,34 +138,264 @@ a.btn {
 
 /*------------О нас (история и видеоблок)-------------*/
 
-.our-story {
+.our-story>.container {
+	display: flex;
 	background-color: #fff;
 }
-.our-story img{
-	float: left;
+.our-story h2 {
+	margin-bottom: 25px;
+	color: #413d4b;
+}
+.our-story p {
+	padding-bottom: 30px;
+}
+.our-story-logo{
+	padding: 0 70px;
 }
 
 .story-video {
+	text-align: center;
 	color: #fff;
-	background: url("about-bg.jpg") #403268 no-repeat;
+	background: url("about-bg.jpg") #403268 no-repeat top center;
+}
+.story-video>.container {
+	width: 940px;
+	height: 410px;
+}
+.play-video {
+	margin-top: 130px;
+	color: #fff;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+.play-video:hover,
+.play-video:active,
+.play-video:focus {
+	opacity: 0.7;
+}
+.play-video span {
+	display: block;
+	margin-top: 30px;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 900;
 }
 
+
+/*-----------Услуги------------*/
+/*320х250
+950х500*/
 .expertise {
 	background-color: #fff;
+	text-align: center;
 }
+.expertise h3, 
+.expertise h2 {
+	color: #413d4b;
+}
+.expertise h2{
+	margin-bottom: 10px;
+}
+.expertise h3{
+	margin-bottom: 20px;
+}
+.expertise p{
+	font-family: "Playfair Display", "Georgia", serif;
+	margin-bottom: 70px;
+}
+.section-intro::after{ /*во втором блоке она слишком светлая, что делать?*/
+	content: "";
+	display: block;
+	width: 52px;
+	margin: 17px auto;
+	border-bottom: 1px #c6c4c9 solid;
+}
+.features-list {
+	width: 950px;
+	height: 501px;
+	overflow: hidden;
+	padding: 0;
+}
+.features-list li {
+	display: block;
+	box-sizing: border-box;
+	float: left; /*временно; возможно флексы лучше*/
+	width: 310px;
+	height: 250px;
+	margin-left: -1px;
+	margin-top: -1px;
+	padding: 120px 30px 35px;
+	
+	border: 1px solid #ebebeb;
+	border-bottom: none;
+	border-right: none;
+}
+
+.feature-item.webdesign{
+	background-image: url("screen-icon.png");
+	background-repeat: no-repeat;
+	background-position: center 40px;
+}
+.feature-item.branding{
+	background-image: url("brush-icon.png");
+	background-repeat: no-repeat;
+	background-position: center 40px;
+}
+.feature-item.mobile{
+	background-image: url("phone-icon.png");
+	background-repeat: no-repeat;
+	background-position: center 40px;
+}
+.feature-item.seo{
+	background-image: url("stats-icon.png");
+	background-repeat: no-repeat;
+	background-position: center 40px;
+}
+.feature-item.gamedev{
+	background-image: url("game-icon.png");
+	background-repeat: no-repeat;
+	background-position: center 40px;
+}
+.feature-item.love{
+	background-image: url("heart.png");
+	background-repeat: no-repeat;
+	background-position: center 40px;
+}
+
+
+/*---------Наша команда---------*/
 
 .our-team {
+	text-align: center;
 	color: #fff;
-	background: url("team-bg.jpg") #403268 no-repeat;
+	background: url("team-bg.jpg") #403268 no-repeat top center;
+}
+.our-team h2{
+	margin-bottom: 10px;
+}
+.our-team .section-intro{
+	font-family: "Playfair Display", "Georgia", serif;
+	margin-bottom: 50px; /*Может стоит объединить с другим? Там разные отступы, но нужны ли они разными?*/
+}
+.team-container {
+	display: flex;
+	margin-bottom: 70px;
+}
+.team-member {
+	margin: 10px;
+	width: 218px;
+	/* height: 308px; */
+}
+.member-photo {
+	background: grey;
+}
+.member-photo img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.member-description {
+	height: 80px;
+	text-align: center;
+	border: 1px #e1e1e1 solid;/*может стоит оставить у всего блока*/
+}
+.team-join{
+	margin-bottom: 25px;
+}
+.team-member-name{
+	margin-top: 20px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+.team-member-position{
+	opacity: 0.7;
+	font-size: 13px;
+	font-weight: 300;
+	text-transform: uppercase;
 }
 
+/*--------Галерея работ---------*/
+.works-gallery{
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	/* max-width: 1600px; */
+	margin: 0 -340px;
+}
+.gallery-item{
+	width: 267px;
+	height: 199px;
+	overflow:hidden;
+	opacity: 0.6;
+}
+.gallery-item:hover{
+	opacity: 1;
+}
+
+
+/*-----------Отзывы-------------*/
+.testimonials {
+	text-align: center;
+	color: #fff;
+	background: url("testimonials-bg.jpg") #403268 no-repeat top center;
+}
+.visually-hidden{
+	display: none;/*заменить потом на то из лекции*/
+}
+.testimonials>.container::before{
+	content:"“";
+	font-size: 100px;
+	font-family: "Playfair Display", "Georgia", serif;
+}
+.testimonial{
+	width: 780px;
+	margin: -20px auto 20px;
+	opacity: 0.85;
+	font-family: "Playfair Display", "Georgia", serif;
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: 0.025em;
+}
+.testimonials-client-name{
+	font-weight: 900;
+	letter-spacing: 0.05em;
+}
+.testimonials-client-position{
+	margin-bottom: 40px;
+	opacity: 0.7;
+	font-size: 13px;
+}
+/*Может завернуть навигацию тут во флексы с space-between? И кстати кнопки черновые вообще.*/
+.testimonials-client-photo{
+	width: 50px;
+	height: auto;
+	margin: 0 5px;
+	border-radius: 50%;
+}
+.testimonials-current{
+	width: 70px;
+	height: auto;
+}
+.testimonials-prev,
+.testimonials-next{
+	background: none;
+	border:none;
+	cursor: pointer;
+	color: #fff;
+	font-size: 25px;;
+}
+
+
+
+.contact-clients h2{
+	color: #413d4b;
+}
 .our-works {
 	background-color: #fff;
 }
-
-.testimonials {
-	color: #fff;
-	background: url("testimonials-bg.jpg") #403268 no-repeat;
+.our-works h2 {
+	color: #413d4b;
 }
 
 .contact-clients {
@@ -121,8 +404,14 @@ a.btn {
 
 .main-footer {
 	color: #fff;
-	background: url("footer-bg.jpg") #403268 no-repeat;
+	background: url("footer-bg.jpg") #403268 no-repeat top center;
 }
 .main-footer a{
 	color: #fff;
 }
+
+
+
+
+
+
