@@ -26,6 +26,7 @@ h1 {
 	
 	font-size: 32px;
 	font-weight: 900;
+	text-transform: capitalize;
 }
 h1::after {
 	content: "";
@@ -58,7 +59,8 @@ section{
 	padding-top: 70px;
 	padding-bottom: 70px;
 }
-a.btn {
+a.btn,
+#form-submit { /*сделать отдельно для кнопок и инпута, т.к. выходит криво*/
 	width: 120px;
 	height: 40px;
 	padding: 13px 15px;
@@ -67,13 +69,17 @@ a.btn {
 	font-size: 16px;
 	text-transform: uppercase;
 	color: #00e0d0;
+	background: none;
 	
 	border: 1px #00e0d0 solid;
 	border-radius: 3px;
 }
 a.btn:hover,
 a.btn:focus,
-a.btn:active { /*!!*/
+a.btn:active,
+#form-submit:hover,
+#form-submit:focus,
+#form-submit:active {
 	color: #46a3cc;
 	border: 2px #46a3cc solid;
 }
@@ -291,7 +297,7 @@ a.btn:active { /*!!*/
 	background: grey;
 }
 .member-photo img{
-	display: block;
+	display: block; /*без этого конкретно на картинке появляется серая полоса, которую ничем не убрать*/
 	width: 100%;
 	height: auto;
 }
@@ -316,6 +322,12 @@ a.btn:active { /*!!*/
 }
 
 /*--------Галерея работ---------*/
+.our-works {
+	background-color: #fff;
+}
+.our-works h2 {
+	color: #413d4b;
+}
 .works-gallery{
 	display: flex;
 	flex-flow: wrap;
@@ -387,20 +399,73 @@ a.btn:active { /*!!*/
 }
 
 
-
-.contact-clients h2{
-	color: #413d4b;
-}
-.our-works {
-	background-color: #fff;
-}
-.our-works h2 {
-	color: #413d4b;
-}
+/*-------------Контактная форма-------------*/
 
 .contact-clients {
 	background-color: #fff;
 }
+.contact-clients h2{
+	color: #413d4b;
+}
+.contact-clients .container{
+	display: flex;
+	justify-content: space-between;
+}
+.contact-us{
+	width: 465px;
+}
+.contact-us h2{
+	margin-bottom: 30px;
+}
+.contact-form input,
+.contact-form textarea{
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 20px;
+	
+	outline: none;
+	border: 1px #e5e5e5 solid;
+	
+	font-size: 14px;
+	color: #a09ea5;
+}
+.contact-form textarea{
+	font-family: "Roboto", "Arial", sans-serif;
+	font-weight: 300;
+}
+#form-submit{/*это тоже отправить в тот стиль для кнопок и инпутов*/
+	cursor: pointer;
+	padding: 5px auto;
+	
+}
+
+/*-------...и клиенты---------*/
+
+.our-clients {
+	width: 380px;
+}
+.our-clients h2{
+	margin-bottom: 45px;
+}
+.clients-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.clients-list li{
+	
+}
+.client-name {
+	width: 160px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+
+
+
+/*---------Подвал----------*/
 
 .main-footer {
 	color: #fff;
@@ -409,9 +474,70 @@ a.btn:active { /*!!*/
 .main-footer a{
 	color: #fff;
 }
-
-
-
-
-
-
+.main-footer h3{
+	margin-bottom: 35px;
+	margin-top: 20px;
+}
+.footer-info,
+.footer-social ul,
+.footer-bottom,
+.legal-info{
+	display: flex;
+}
+.footer-info,
+.footer-bottom,
+.legal-info{
+	justify-content: space-between;
+}
+.footer-logo{
+	margin-bottom: 25px;
+}
+.footer-info{
+	margin-bottom: 65px;
+}
+.footer-info p{
+	margin-bottom: 15px;
+}
+.footer-about {
+	width: 300px;
+	margin-right: 20px;
+}
+.footer-contacts {
+	width: 310px;
+	margin-right: 20px;
+}
+.subscribe {
+	margin-top: -10px;
+	margin-bottom: 25px;
+}
+.subscribe input[type="email"]{
+	width: 180px;
+	padding: 15px;
+	
+	color: #fff;
+	background: none;
+	border: 1px rgba(255,255,255, 0.5) solid;
+}
+.subscribe input[type="submit"]{
+	width: 70px;
+	height: 48px;
+	margin: 10px;
+	background: rgba(255,255,255, 0.5) url("plane-icon.png") no-repeat center center;
+	border: none;
+}
+.footer-address{
+	padding-left: 30px;
+	background: url("map-point.png") 0px 0px no-repeat;
+}
+.footer-phone{
+	padding-left: 30px;
+	background: url("phone2-icon.png") 0px 0px no-repeat;
+}
+.social-icon {
+	margin-right: 7px;
+}
+.legal-info{
+	width: 310px;
+	font-weight: normal;
+	text-transform: uppercase;
+}
