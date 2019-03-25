@@ -47,8 +47,10 @@ h3 {
 	font-size: 14px;
 	text-transform: uppercase;
 }
-section{
-	background-position: top center;
+section,
+footer{
+	background: top center fixed no-repeat;
+	background-size: cover;
 }
 .container, 
 .main-navigation {
@@ -60,23 +62,26 @@ section{
 	padding-top: 70px;
 	padding-bottom: 69px;
 }
+.container.wide{
+	width: 100%;
+	max-width: 1600px;
+	padding-right: 0;
+	padding-left: 0;
+}
 .btn {
-/* 	width: 120px;
-	height: 40px; */
 	display: inline-block;
 	padding: 10px 13px 8px;
+		
+	border: 1px #00e0d0 solid;
+	border-radius: 2px;
 	
 	font-family: "Hammersmith One", "Arial", sans-serif;
 	font-size: 16px;
 	text-transform: uppercase;
 	color: #00e0d0;
 	background: none;
-	
-	border: 1px #00e0d0 solid;
-	border-radius: 2px;
 }
 .btn:hover,
-.btn:focus,
 .btn:active {
 	color: #46a3cc;
 	border: 1px #46a3cc solid;
@@ -98,7 +103,8 @@ section{
 .welcome {
 	text-align: center;
 	color: #fff;
-	background: url("header-bg.jpg") #403268 no-repeat top center;
+	background-color: #403268;
+	background-image: url("header-bg.jpg");
 }
 .welcome p {
 	width: 780px;
@@ -124,10 +130,9 @@ section{
 }
 .main-navigation a {
 	color: #fff;
-	letter-spacing: 1px;/*???*/
+	letter-spacing: 1px;
 }
 .main-navigation a:hover, 
-.main-navigation a:focus,
 .main-navigation a:active {
 	color: #00e0d0;
 }
@@ -181,9 +186,9 @@ section{
 .story-video {
 	text-align: center;
 	color: #fff;
-	background: url("about-bg.jpg") #403268 no-repeat top center;
+	background-color: #403268;
+	background-image: url("about-bg.jpg");
 }
-/*придумать более культурный способ сделать видео, чтобы если то только вставить*/
 .story-video>.container {
 	width: 940px;
 	height: 411px;
@@ -240,7 +245,7 @@ section{
 .features-list li {
 	display: block;
 	box-sizing: border-box;
-	float: left; /*временно; возможно флексы лучше*/
+	float: left; /*возможно флексы лучше*/
 	width: 321px;
 	height: 250px;
 	margin-left: -1px;
@@ -289,7 +294,8 @@ section{
 .our-team {
 	text-align: center;
 	color: #fff;
-	background: url("team-bg.jpg") #403268 no-repeat top center;
+	background-color: #403268;
+	background-image: url("team-bg.jpg");
 }
 .our-team h2{
 	margin-bottom: 9px;
@@ -306,7 +312,6 @@ section{
 .team-member {
 	margin: 10px;
 	width: 220px;
-	/* height: 308px; */
 }
 .member-photo {
 	background: lightgrey;
@@ -321,7 +326,7 @@ section{
 .member-description {
 	height: 80px;
 	text-align: center;
-	border: 1px #e1e1e1 solid;/*может стоит оставить у всего блока*/
+	border: 1px #e1e1e1 solid;
 }
 .team-join{
 	margin-bottom: 22px;
@@ -343,12 +348,18 @@ section{
 .our-works-head{
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 70px;
+	width: 960px;
+	padding: 10px;
+	margin: 0 auto 70px;
 }
 .our-works-head>a{
 	padding-right: 9px;
 	margin-top: -5px;
 	color: #413d4b;
+}
+.our-works-head>a:hover,
+.our-works-head>a:active{
+	opacity: 0.7;
 }
 .our-works-head>a::after{
 	content:"";
@@ -369,29 +380,37 @@ section{
 .works-gallery{
 	display: flex;
 	flex-flow: wrap;
+	width: 100%;
 	justify-content: center;
-	/* max-width: 1600px; */
-	margin: 0 -340px 70px;
+	margin: 0 /* -340px */ 0 70px;
 }
 .gallery-item{
-	width: 267px;
+	/* width: 267px; */
+	flex-basis: 266px;
+	flex-grow: 1;
 	height: 199px;
-	overflow:hidden;
+	overflow: hidden;
 	opacity: 0.6;
 }
 .gallery-item:hover{
 	opacity: 1;
 }
 .load-more{
-	margin: 0 auto 2px;
 	display: block;
+	margin: 0 auto 2px;
+	cursor: pointer;
 }
-
+.gallery-item img{
+	/*вписывает потенциально разнокалиберные картинки в одинаковые окошки*/
+	width: 100%;
+	min-height: 100%;
+}
 /*-----------Отзывы-------------*/
 .testimonials {
 	text-align: center;
 	color: #fff;
-	background: url("testimonials-bg.jpg") #403268 no-repeat top center;
+	background-color: #403268;
+	background-image: url("testimonials-bg.jpg");
 }
 .visually-hidden{
 	display: none;/*заменить потом на то из лекции*/
@@ -421,7 +440,6 @@ section{
 	opacity: 0.7;
 	font-size: 13px;
 }
-/*Может завернуть навигацию тут во флексы с space-between? И кстати кнопки черновые вообще.*/
 .testimonials-client-photo{
 	width: 46px;
 	height: auto;
@@ -441,10 +459,11 @@ section{
 	background: none;
 	border:none;
 	cursor: pointer;
-	/* color: #fff;
-	font-size: 25px; */
 }
-
+.testimonials-prev:hover,
+.testimonials-next:hover{
+	opacity: 0.7;
+}
 
 /*-------------Контактная форма-------------*/
 
@@ -484,6 +503,10 @@ section{
 	margin-bottom: 26px;
 	margin-left: 10px;
 	padding: 12px 20px;
+}
+.contact-form input:not(:last-of-type):focus,
+.contact-form textarea:focus{
+	outline: 1px #00e0d0 solid;
 }
 .contact-form textarea{
 	margin-bottom: 26px;
@@ -529,13 +552,18 @@ section{
 
 .main-footer {
 	color: #fff;
-	background: url("footer-bg.jpg") #403268 no-repeat top center;
+	background-color: #403268;
+	background-image: url("footer-bg.jpg");
 }
 .main-footer .container{
 	padding-bottom: 65px;;
 }
 .main-footer a{
 	color: #fff;
+}
+.main-footer a:hover, 
+.main-footer a:active {
+	color: #00e0d0;
 }
 .main-footer h3{
 	margin-bottom: 35px;
@@ -572,6 +600,7 @@ section{
 	margin-right: 20px;
 }
 .subscribe {
+	display: flex;
 	margin-top: -10px;
 	margin-bottom: 16px;
 }
@@ -586,9 +615,13 @@ section{
 .subscribe input[type="submit"]{
 	width: 70px;
 	height: 48px;
-	margin: 8px;
+	margin-left: 8px;
 	background: rgba(255,255,255, 0.5) url("plane-icon.png") no-repeat center center;
 	border: none;
+	cursor: pointer;
+}
+.subscribe input[type="submit"]:hover{
+	background-color: rgba(255,255,255, 0.9);
 }
 .footer-address{
 	padding-left: 30px;
@@ -603,6 +636,9 @@ section{
 }
 .social-icon {
 	margin-right: 8px;
+}
+.social-icon:hover {
+	opacity: 0.7;
 }
 .legal-info{
 	width: 310px;
