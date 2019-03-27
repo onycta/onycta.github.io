@@ -15,17 +15,17 @@
 	-->
 </head>
 <body>
-	<section class="welcome">
+	<section class="welcome" id="home">
 		<nav class="main-navigation">
 			<img src="files/logo.png" alt="Our awesome logo" width="128" height="50" class="logo">
 			<ul class="sitenav">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Expertise</a></li>
-				<li><a href="#">Team</a></li>
-				<li><a href="#">Works</a></li>
-				<li><a href="#">People say</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#expertise">Expertise</a></li>
+				<li><a href="#team">Team</a></li>
+				<li><a href="#portfolio">Works</a></li>
+				<li><a href="#testimonials">People say</a></li>
+				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 		<div class="container">
@@ -52,14 +52,14 @@
 				</div>
 			</div>
 			<nav class="slider-nav">
-				<button class="slider-dot slider-dot-active"></button>
-				<button class="slider-dot"></button>
-				<button class="slider-dot"></button>
-				<button class="slider-dot"></button>
+				<button class="slider-dot slider-dot-active" onclick="currentSlide(1)"></button>
+				<button class="slider-dot" onclick="currentSlide(2)"></button>
+				<button class="slider-dot" onclick="currentSlide(3)"></button>
+				<button class="slider-dot" onclick="currentSlide(4)"></button>
 			</nav>
 		</div>
 	</section>
-	<section class="our-story">
+	<section class="our-story" id="about">
 		<div class="container">
 			<div class="our-story-logo">
 				<img src="files/logo-big.svg" alt="Our big and awesome logo" width="240" height="230">
@@ -81,7 +81,7 @@
 			</button>
 		</div>
 	</section>
-	<section class="expertise">
+	<section class="expertise" id="expertise">
 		<div class="container">
 			<h2>Expertise</h2>
 			<p class="section-intro">Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
@@ -113,7 +113,7 @@
 			</ul>
 		</div>
 	</section>
-	<section class="our-team">
+	<section class="our-team" id="team">
 		<div class="container">
 			<h2>Meet our amazing team</h2>
 			<p class="section-intro">Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
@@ -159,8 +159,8 @@
 			<a href="#" class="btn">We are hiring</a>
 		</div>
 	</section>
-	<section class="our-works">
-		<div class="container">
+	<section class="our-works" id="portfolio">
+		<div class="container wide">
 			<div class="our-works-head">
 				<h2>Our works</h2>
 				<a href="#">See All Projects in dribbble</a>
@@ -206,24 +206,48 @@
 			<button class="load-more btn">Load more</button>
 		</div>
 	</section>
-	<section class="testimonials">
+	<section class="testimonials" id="testimonials">
 		<div class="container">
 			<h2 class="visually-hidden">Testimonials</h2>
-			<p class="testimonial">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
-			<p class="testimonials-client-name">JANE GALADRIEL</p>
-			<p class="testimonials-client-position">CEO TENGKUREP</p>
+			<div class="testimonials-slides">
+				<div class="testimonial">
+					<p class="testimonial-text">Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
+					<p class="testimonials-client-name">Mathilda Perish</p>
+					<p class="testimonials-client-position">Designer</p>
+				</div>
+				<div class="testimonial">
+					<p class="testimonial-text">Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
+					<p class="testimonials-client-name">Michael Stiller</p>
+					<p class="testimonials-client-position">Engineer</p>
+				</div>
+				<div class="testimonial">
+					<p class="testimonial-text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
+					<p class="testimonials-client-name">JANE GALADRIEL</p>
+					<p class="testimonials-client-position">CEO TENGKUREP</p>
+				</div>
+				<div class="testimonial testimonial-current">
+					<p class="testimonial-text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
+					<p class="testimonials-client-name">Octavia Cecil</p>
+					<p class="testimonials-client-position">Director at Nowhere Studios, Nowhere</p>
+				</div>
+				<div class="testimonial">
+					<p class="testimonial-text"> Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
+					<p class="testimonials-client-name">Mike Galletworth</p>
+					<p class="testimonials-client-position">Programmer</p>
+				</div>
+			</div>
 			<div class="testimonials-nav">
-				<button class="testimonials-prev"><img src="files/backward.png" alt="Previous"></button>
+				<button class="testimonials-prev" onclick="otherTestimonial(-1)"><img src="files/backward.png" alt="Previous"></button>
 				<img src="files/photo1.jpg" alt="Photo of a client" class="testimonials-client-photo">
 				<img src="files/photo2.jpg" alt="Photo of a client" class="testimonials-client-photo">
-				<img src="files/photo3.jpg" alt="Photo of a client" class="testimonials-client-photo testimonials-current">
+				<img src="files/photo3.jpg" alt="Photo of a client" class="testimonials-client-photo">
 				<img src="files/photo4.jpg" alt="Photo of a client" class="testimonials-client-photo">
 				<img src="files/photo5.jpg" alt="Photo of a client" class="testimonials-client-photo">
-				<button class="testimonials-next"><img src="files/forward.png" alt="Next"></button>
+				<button class="testimonials-next" onclick="otherTestimonial(1)"><img src="files/forward.png" alt="Next"></button>
 			</div>
 		</div>
 	</section>
-	<section class="contact-clients">
+	<section class="contact-clients" id="contact">
 		<div class="container">
 			<div class="contact-us">
 				<h2>Give us a good news</h2>
@@ -278,12 +302,12 @@
 						<input type="submit" value="">
 					</form>
 					<ul>
-						<li class="social-icon"><img src="files/facebook.png" alt="Our Facebook"></li>
-						<li class="social-icon"><img src="files/twitter.png" alt="Our Twitter"></li>
-						<li class="social-icon"><img src="files/dribbble.png" alt="Our Dribbble"></li>
-						<li class="social-icon"><img src="files/instagram.png" alt="Our Instagram"></li>
-						<li class="social-icon"><img src="files/gplus.png" alt="Find us on google plus if you can"></li>
-						<li class="social-icon"><img src="files/youtube.png" alt="Our youtube channel"></li>
+						<li class="social-icon"><a href="https://facebook.com"><img src="files/facebook.png" alt="Our Facebook"></a></li>
+						<li class="social-icon"><a href="https://twitter.com"><img src="files/twitter.png" alt="Our Twitter"></a></li>
+						<li class="social-icon"><a href="https://dribbble.com"><img src="files/dribbble.png" alt="Our Dribbble"></a></li>
+						<li class="social-icon"><a href="https://instagram.com"><img src="files/instagram.png" alt="Our Instagram"></a></li>
+						<!-- <li class="social-icon"><img src="files/gplus.png" alt="Find us on google plus if you can"></li> -->
+						<li class="social-icon"><a href="https://youtube.com"><img src="files/youtube.png" alt="Our youtube channel"></a></li>
 					</ul>
 				</div>
 			</div>

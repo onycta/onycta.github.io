@@ -22,3 +22,28 @@ function showSlides(n) {
   slideIndex++;
   setTimeout(showSlides, 5000); 
 } 
+
+var testimonialIndex = 1;
+showTestimonial(testimonialIndex);
+
+function otherTestimonial(n) {
+	testimonialIndex += n;
+	showTestimonial(testimonialIndex);
+}
+function showTestimonial(n) {
+	var y;
+	var testimonials = document.getElementsByClassName("testimonial");
+	var photos = document.getElementsByClassName("testimonials-client-photo");
+	
+	if (n > testimonials.length) {testimonialIndex = 1}
+	if (n < 1) {testimonialIndex = testimonials.length}
+	
+	for (i = 0; i < testimonials.length; i++){
+		testimonials[i].style.display = "none";
+	}
+	for (i = 0; i < photos.length; i++) {
+		photos[i].className = photos[i].className.replace(" testimonials-photo-current", "");
+	}
+	testimonials[testimonialIndex-1].style.display = "block";
+	photos[testimonialIndex-1].className += " testimonials-photo-current";
+}
