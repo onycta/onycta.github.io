@@ -1,10 +1,21 @@
  var slideIndex=1;
-showSlides(slideIndex);
+ makeSlidesSlide();
+/* showSlides(slideIndex); */ //вызывает самую первую итерацию
+
+
+function makeSlidesSlide(){
+	showSlides(slideIndex);
+	var t = setTimeout(makeSlidesSlide, 6000);
+	
+}
+
+
+
 
 function currentSlide(n){
 	slideIndex = n;
 	showSlides(slideIndex);
-} 
+}  
 
 function showSlides(n) {
   var i;
@@ -20,10 +31,11 @@ function showSlides(n) {
   dots[slideIndex-1].className += " slider-dot-active";
   slides[slideIndex-1].style.display = "block"; 
   slideIndex++;
-  setTimeout(showSlides, 5000); 
+  /* var t = setTimeout(showSlides, 5000); *///раз запущенная, функция вызывает сама себя с отсрочкой 
 } 
 
-var testimonialIndex = 1;
+
+var testimonialIndex = 3;
 showTestimonial(testimonialIndex);
 
 function otherTestimonial(n) {
