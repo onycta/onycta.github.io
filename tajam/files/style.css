@@ -100,7 +100,7 @@ footer{
 
 /*------Шапка и приветствие-------*/
 
-.welcome {
+.welcome {  
 	text-align: center;
 	color: #fff;
 	background-color: #403268;
@@ -108,6 +108,7 @@ footer{
 }
 .welcome p {
 	width: 780px;
+	min-height: 100px; 
 	margin: 0 auto 44px;
 	padding: 0 10px;
 	
@@ -135,6 +136,14 @@ footer{
 .main-navigation a:hover, 
 .main-navigation a:active {
 	color: #00e0d0;
+}
+@keyframes fading{
+	from {opacity: 0}
+	to {opacity: 1}
+}
+.fading {
+	animation-name: fading;
+	animation-duration: 1s;
 }
 .slider-nav {
 	margin-top: 115px;
