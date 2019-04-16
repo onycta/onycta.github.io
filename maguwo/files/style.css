@@ -1,0 +1,200 @@
+/* Проверить цвет темного текста! */
+*{
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+body {
+	font-family: 'Raleway', Arial, sans-serif;
+}
+h1 {
+	font-family: 'Crete Round', Georgia, serif;
+	font-size: 48px;
+	line-height: 24px;
+}
+
+h2, h3 {
+	font-weight: 700;
+}
+h2 {
+	font-size: 48px;
+}
+h3 {
+	font-size: 36px;
+}
+.container {
+	width: 1170px;
+	margin: 0 auto;
+}
+.visually-hidden {
+	display: none;
+}
+
+/*--------------Шапка--------------*/
+.main-header {
+	display: flex;
+	height: 147px;
+	background-color: #fff;
+}
+.main-nav {
+	display: flex;
+	justify-content: space-between;
+	padding: 58px 0;
+}
+.main-contacts {
+	padding: 40px 0 31px 49px;
+	border-left: 1px solid #ebebeb;
+}
+.main-contacts p{
+	font-weight: 600;
+	font-size: 12px;
+}
+.site-nav a{
+	font-size: 16px;
+	text-decoration: none;
+}
+.main-nav a{
+	text-transform: uppercase;
+	color: #202242;
+}
+.site-nav li{
+	display: inline-block;
+	margin: 0 20px;
+}
+
+
+
+/*------------Приветствие------------*/
+
+.welcome {
+	background: #202242 url("baloon.jpg") no-repeat center top;
+	background-size: cover;
+	color: #fff;
+}
+.welcome .container {
+	padding-top: 235px;
+	padding-bottom: 140px;
+}
+
+
+/*----------Сервисы----------*/
+
+.services .container {
+	display: flex;
+	justify-content: space-around;
+	color: #fff;
+}
+.services-hosting {
+	background-color: #202242;
+}
+.services-domain {
+	background-color: #ffe13e;
+}
+
+
+/*---------Фичи---------*/
+.features {
+	background: #fbf8f1 url("circles-big.png") no-repeat center center;
+}
+.features h2,
+.features h3,
+.features p {
+	text-align: center;
+}
+.features h2 {
+	font-size: 48px;
+}
+.features-list {
+	display: flex;
+	justify-content: space-between;
+}
+.feature {
+	display: block;
+	width: 270px;
+}
+.feature h3{
+	font-family: 'Crete Round', Georgia, serif;
+	font-size: 30px;
+	color: #f4d320;
+}
+.feature p{
+	font-size: 14px;
+	line-height: 24px;
+}
+
+
+/*---------Клиенты и отзывы---------*/
+
+.our-clients h2{
+	font-weight: 700;
+	font-size: 36px;
+}
+.clients-description {
+	width: 370px;
+}
+.clients {
+	display: flex;
+}
+.clients p {
+	color: #adadad;
+	font-size: 16px;
+}
+.clients-list {
+	display: flex;
+	float: right;
+}
+.client-card {
+	margin-left: 30px; 
+}
+.opinions {
+	display: flex;
+}
+.opinion-card {
+	width: 370px;
+	height: 180px;
+	font-family: 'Crete Round', Georgia, serif;
+	font-style: italic;
+	font-size: 14px;
+	background-color: #faf9f9;
+	color: #a4a4a4;
+}
+
+
+/*----------Закажи!---------*/
+
+.pricing {
+	background-color: #202242;
+}
+.pricing h2 {
+	font-size: 36px;
+	font-weight: 700;
+	color: #fff;
+}
+.pricing p{
+	font-size: 18px;
+	color: #67687b;
+}
+
+
+/*-----------Подвал----------*/
+
+.main-footer {
+	background-color: #363855;
+	color: #fff;
+}
+.footer-nav h3{
+	font-weight: 700;
+	font-size: 18px;
+}
+.footer-nav ul{
+	width: 70px;
+}
+.footer-nav li {
+	display: block;
+}
+.footer-nav a {
+	text-transform: capitalize;
+	color: #fff;
+}
