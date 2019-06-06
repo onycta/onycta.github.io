@@ -1,7 +1,7 @@
 /*----Colors----*/
 
 $maguwo_blue: #202242;
-$maguwo-yellow: #ffe13e;
+$maguwo_yellow: #ffe13e;
 $dark_yellow: #f4d320;
 $cite_grey: #a4a4a4;
 $p_grey: #adadad;
@@ -13,7 +13,7 @@ $heading_font: 'Crete Round', Georgia, serif;
 
 /*----Global and tag styles----*/
 
-*{
+ *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -23,11 +23,12 @@ li {
 }
 body {
 	font-family: $main_font;
+	line-height: 24px;
 }
 h1 {
 	font-family: $heading_font;
 	font-size: 48px;
-	line-height: 24px;
+	font-weight: normal;
 }
 
 h2, h3 {
@@ -39,9 +40,18 @@ h2 {
 h3 {
 	font-size: 36px;
 }
+button {
+	cursor: pointer;
+}
 .container {
 	width: 1170px;
 	margin: 0 auto;
+}
+a.btn {
+	display: block;
+	border: 3px solid white;
+	text-decoration: none;
+	text-align: center;
 }
 
 .visually-hidden {
@@ -57,76 +67,238 @@ h3 {
 
 /*--------------Шапка--------------*/
 .main-header {
-	display: flex;
 	height: 147px;
 	background-color: #fff;
+	
+	.container {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+	}
 }
 .main-nav {
 	display: flex;
+	flex-grow: 1;
 	justify-content: space-between;
-	padding: 58px 0;
-	
-	a{
-		text-transform: uppercase;
-		color: #202242;
-	}
+	align-items: center;
 }
-.main-contacts {
-	padding: 40px 0 31px 49px;
-	border-left: 1px solid #ebebeb;
-	
-	p{
-		font-weight: 600;
-		font-size: 12px;
-	}
-}
-
 .site-nav {
-
+	padding: 0 10px;
 	li{
 		display: inline-block;
-		margin: 0 20px;
+		margin-right: 40px;
 	}
-	
 	a{
 		font-size: 16px;
 		text-decoration: none;
+		text-transform: uppercase;
+		color: $maguwo_blue;
 	}
-	
+	a:hover {
+		color: $maguwo_yellow;
+		text-shadow: -0.5px -0.5px 0.6px $maguwo_yellow,
+					0.5px 0.5px 0.6px $maguwo_yellow;
+	}
 }
-.main-nav a{
-	text-transform: uppercase;
-	color: #202242;
+
+
+.main-contacts {
+	padding: 32px 0 30px 50px;
+	border-left: 1px solid #ebebeb;
+	&>div{
+		display: flex;
+		
+	}
+	p{
+		margin-bottom: 15px;
+		font-weight: 600;
+		font-size: 12px;
+		
+		&.call-us {
+			margin: 3px 0;
+			padding-top: 8px;
+			padding-left: 20px;
+			border-left: 1px solid rgba(32,34,66,0.31);
+			font-family: Arial, sans-serif;
+			font-size: 24px;
+			font-weight: bold;
+		}
+	}
+	.chat-us {
+		display: block;
+		margin-right: 20px;
+		padding: 15px 30px; 
+		border: none;
+		font-weight: 600;
+		font-size: 14px;
+		background-color: $maguwo_yellow;
+	}
 }
+
+
+
+
 
 
 /*------------Приветствие------------*/
 
 .welcome {
-	background: #202242 url("baloon.jpg") no-repeat center top;
+	padding: 230px 0 140px;
+	
+	text-align: center;
+	background: $maguwo_blue url("baloon.jpg") no-repeat center top;
 	background-size: cover;
 	color: #fff;
 	
-	.container {
-		padding-top: 235px;
-		padding-bottom: 140px;
+	select, input[type="submit"] {
+		font-weight: bold;
+	}
+	select {
+		font-size: 18px;
+	}
+	input[type="submit"] {
+		font-size: 14px;
+	}
+	h1 {
+		margin-bottom: 45px;
+		text-transform: capitalize;
+	}
+}	
+
+.tagline {
+	font-size: 30px;
+}
+.tagline::after {
+	content:'';
+	display: block;
+	width: 105px;
+	height: 110px;
+	margin: 60px auto;
+	background: url('circles.png') center/cover no-repeat;
+}
+
+.domain-name {
+	font-size: 18px;
+}
+
+.check-domain {
+	display: flex;
+    justify-content: center;
+	width: 570px;
+	margin: 0 auto;
+	padding: 17px;
+	
+	background-color: rgba(255,255,255,0.3);
+	
+	input, select {
+		display: inline-block;
+		/* box-sizing: content-box; */
+		height: 55px;
+		margin: 0;
+		outline: none;
+		border: none;
+/*
+	!!!outline и border ведут себя тут неадекватно. Вложить все это дело
+	в контейнер с полупрозрачным фоном вместо границы и отступами 17п.
+*/
+	}
+	.domain-name {
+		width: 275px;
+		padding: 20px 25px;
+		background-clip: padding-box;//не дает фону залить границу!
+	}
+	select {
+		width: 110px;
+		padding: 15px 20px 20px;
+		text-align: center;
+		background-color: $maguwo_yellow;
+	}
+	input[type="submit"] {
+		width: 155px;
+		padding: 20px;
+		background-color: $maguwo_yellow;
+		color: white;
 	}
 }
 
 
-/*----------Сервисы----------*/
+/*----------Услуги----------*/
 
 .services {
+	position: relative;//для фона
+	text-align: center;
 	.container {
 		display: flex;
 		justify-content: space-around;
 		color: #fff;
+		&>div {
+			position: relative;
+			width: 50%;
+			padding: 105px 81px 195px;
+		}
 	}
-	&-hosting {
-		background-color: #202242;
+	h3 {
+		margin: 0 auto 20px;
 	}
-	&-domain {
-		background-color: #ffe13e;
+	p {
+		/* margin-bottom: 35px; */
+
+		font-size: 14px;
+/* 		text-align: center;
+ */	}
+	&-hosting h3::before{
+		content:'';
+		display: block;
+		width: 170px;
+		height: 170px;
+		margin: 10px auto 50px;
+		background: transparent url('hosting.png') center/cover no-repeat;
+	}
+	&-domain h3::before {
+		content:'';
+		display: block;
+		width: 305px;
+		height: 76px;
+		margin: 75px auto 80px;
+		background: transparent url('domain.png') center/cover no-repeat;
+	}
+	&-more {
+		position: absolute;
+		bottom: 105px;
+		
+		width: 155px;
+		margin: 0 auto; //не лишнее?
+		padding: 15px 0;
+		//оставить их сразу после блоков или привязать к низу блока?
+		
+		font-size: 18px;
+		font-weight: bold;
+		color: white;
+	}
+	&-hosting .services-more{
+		left: calc(50% - 75px);
+	}
+	&-domain .services-more{
+		right: calc(50% - 75px);
+	}
+}
+.bg-color {
+	display: flex;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	
+	width: 100%;
+	height: 100%;
+	
+	.blue, .yellow {
+		width: 50%;
+	}
+	.blue {
+		background-color: $maguwo_blue;
+	}
+	.yellow {
+		background-color: $maguwo_yellow;
 	}
 }
 
@@ -135,50 +307,85 @@ h3 {
 
 /*---------Фичи---------*/
 .features {
+	padding: 95px 0;
 	background: #fbf8f1 url("circles-big.png") no-repeat center center;
 	
-	h2, h3, p {
+	h2, h3, p, em {
 		text-align: center;
 	}
 	h2 {
+		padding-bottom: 25px;
 		font-size: 48px;
+	}
+	em {
+		display: block;
+		margin-bottom: 85px;
+		font-size: 24px;
+		font-style: normal;
 	}
 	&-list {
 		display: flex;
 		justify-content: space-between;
 	}
-	.feature {
+}
+.feature {
+	display: block;
+	width: 270px;
+	padding-top: 165px;
+	
+	h3{
+		margin-bottom: 30px;
+		font-family: $heading_font;
+		font-size: 30px;
+		color: #f4d320;
+	}
+	h3::before{
+		content:'';
 		display: block;
-		width: 270px;
-		
-		h3{
-			font-family: 'Crete Round', Georgia, serif;
-			font-size: 30px;
-			color: #f4d320;
-		}
-		p{
-			font-size: 14px;
-			line-height: 24px;
-		}
+		width: 70px;
+		height: 1px;
+		margin: -1px auto 30px;
+		border-bottom: 3px solid rgba(32,34,66,0.5);//maguwo_blue, half-opaque
+	}
+	p{
+		font-size: 14px;
+		line-height: 24px;
+	}
+	&.support{
+		background: url('support.png') top center no-repeat;
+	}
+	&.cloud{
+		background: url('cloud.png') top center no-repeat;
+	}
+	&.database{
+		background: url('database.png') top center no-repeat;
+	}
+	&.monitoring{
+		background: url('monitoring.png') top center no-repeat;
 	}
 }
 
 
 /*---------Клиенты и отзывы---------*/
 
-.our-clients h2{
-	font-weight: 700;
-	font-size: 36px;
+.our-clients {
+	.container{
+		padding: 85px 0 60px;
+	}
+	h2{
+		margin-bottom: 25px;
+		font-weight: 700;
+		font-size: 36px;
+	}
 }
-.clients-description {
-	width: 370px;
-}
+
 .clients {
 	display: flex;
-}
-.clients p {
-	color: #adadad;
-	font-size: 16px;
+	margin-bottom: 80px;
+	p {
+		color: #adadad;
+		font-size: 16px;
+	}
 }
 .clients-list {
 	display: flex;
@@ -189,14 +396,37 @@ h3 {
 }
 .opinions {
 	display: flex;
+	justify-content: space-between;
 }
 .opinion-card {
+	position: relative;
 	width: 370px;
-	height: 180px;
+	min-height: 180px;
+	margin-bottom: 110px;
+	padding: 20px 30px;
+	background-color: #faf9f9;
+	
+	img {
+		position: absolute;
+		right: 20px;
+		bottom: -50px;
+		border-radius: 50%;
+		border: 4px solid #e7e7ea;
+	}
+	.opinions-name {
+		position: absolute;
+		left: 25px;
+		bottom: 25px;
+		color: #696969;
+		font-weight: bold;
+	}
+}
+
+.opinion-text {
+	padding-bottom: 40px;
 	font-family: 'Crete Round', Georgia, serif;
 	font-style: italic;
 	font-size: 14px;
-	background-color: #faf9f9;
 	color: #a4a4a4;
 }
 
@@ -204,36 +434,138 @@ h3 {
 /*----------Закажи!---------*/
 
 .pricing {
-	background-color: #202242;
-}
-.pricing h2 {
-	font-size: 36px;
-	font-weight: 700;
-	color: #fff;
-}
-.pricing p{
-	font-size: 18px;
-	color: #67687b;
+	padding: 90px 0;
+	background-color: $maguwo_blue;
+	&>.container {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	h2 {
+		margin-bottom: 13px;
+		font-size: 36px;
+		font-weight: 700;
+		color: #fff;
+	}
+	p{
+		font-size: 18px;
+		color: #67687b;
+	}
+	a.pricing-more{
+		width: 235px;
+		padding: 30px 50px;
+		font-size: 18px;
+		font-weight: bold;
+		color: $maguwo_blue;
+		background-color: $maguwo_yellow;
+	}
 }
 
 
 /*-----------Подвал----------*/
 
 .main-footer {
-	background-color: #363855;
+	padding: 95px 0 70px;
+	background-color: $footer_blue;
 	color: #fff;
+	
+	.address {
+		font-size: 18px;
+		font-weight: bold;
+	}
+	a{
+		color: white;
+		text-decoration: none;
+	}
+	a:hover {
+		color: white;
+		text-shadow: none;
+		opacity: 0.6;
+	}
+	.social-icon {
+		display: inline-block;
+		width: 20px;
+		margin: 0 10px;
+		img:hover {
+			opacity: 0.6;
+		}
+	}
 }
-.footer-nav h3{
-	font-weight: 700;
-	font-size: 18px;
+.footer-top {
+	display: flex;
+	justify-content: space-between;
 }
-.footer-nav ul{
-	width: 70px;
+.footer-map {
+	position: relative;
+	
+	img {
+		width: 900px;
+		height: auto;
+		padding-right: 80px;
+		opacity: 0.2;
+	}
+	.address {
+		position: absolute;
+		top: 232px;
+		left: 668px;
+	}
+	.address::before{
+		content: '';
+		display: block;
+		position: absolute;
+		left: -50px;
+		width: 35px;
+		height: 50px;
+		background: url('pointer.png') center center/cover no-repeat;
+	}
 }
-.footer-nav li {
-	display: block;
+.footer-nav {
+	text-align: right;
+	
+	h3{
+		margin: 50px 0 30px;
+		font-weight: 700;
+		font-size: 18px;
+	}
+	ul{
+		min-width: 70px;
+		margin-bottom: 35px;
+	}
+	li {
+		display: block;
+		margin-right: 0;
+		padding: 10px 0;
+		font-size: 16px;
+	}
+	li:not(:last-of-type){
+		border-bottom: 1px dotted rgba(255, 255, 255, 0.16);
+	}
+	a {
+		text-transform: capitalize;
+	}
+	.site-nav{
+		padding: 0;
+	}
 }
-.footer-nav a {
-	text-transform: capitalize;
-	color: #fff;
+.copyright {
+	margin: 0 auto;
+	font-size: 14px;
+	p{
+		text-align: center;
+	}
+	p::before{
+		content:'';
+		display: block;
+		width: 40px;
+		height: 40px;
+		margin: 0 auto 15px;
+		background: url('circles.png') center/35px no-repeat;
+		transform: rotate(-15deg);
+	}
+}
+.back-to-top {
+	   position: absolute;
+    right: calc(50% - 570px);
+	font-size: 12px;
+	line-height: 36px;
 }
