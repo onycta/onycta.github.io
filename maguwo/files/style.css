@@ -40,6 +40,10 @@ a.btn {
   text-decoration: none;
   text-align: center; }
 
+a.btn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #202242; }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -52,7 +56,7 @@ a.btn {
 
 /*--------------╨и╨░╨┐╨║╨░--------------*/
 .main-header {
-  height: 147px;
+  min-height: 147px;
   background-color: #fff; }
   .main-header .container {
     display: flex;
@@ -61,25 +65,30 @@ a.btn {
 
 .main-nav {
   display: flex;
-  flex-grow: 1;
+  flex-grow: 2;
   justify-content: space-between;
   align-items: center; }
 
-.site-nav {
-  padding: 0 10px; }
-  .site-nav li {
+.main-nav .site-nav {
+  /* padding: 0 10px; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .main-nav .site-nav li {
     display: inline-block;
-    margin-right: 40px; }
-  .site-nav a {
+    margin: 0 20px; }
+  .main-nav .site-nav a {
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
     color: #202242; }
-  .site-nav a:hover {
+  .main-nav .site-nav a:hover {
     color: #ffe13e;
     text-shadow: -0.5px -0.5px 0.6px #ffe13e, 0.5px 0.5px 0.6px #ffe13e; }
 
 .main-contacts {
+  flex-grow: 1;
+  flex-shrink: 0;
   padding: 32px 0 30px 50px;
   border-left: 1px solid #ebebeb; }
   .main-contacts > div {
@@ -88,14 +97,19 @@ a.btn {
     margin-bottom: 15px;
     font-weight: 600;
     font-size: 12px; }
-    .main-contacts p.call-us {
-      margin: 3px 0;
-      padding-top: 8px;
-      padding-left: 20px;
-      border-left: 1px solid rgba(32, 34, 66, 0.31);
-      font-family: Arial, sans-serif;
-      font-size: 24px;
-      font-weight: bold; }
+  .main-contacts .call-us {
+    margin: 3px 0;
+    padding-top: 8px;
+    padding-left: 20px;
+    border-left: 1px solid rgba(32, 34, 66, 0.31);
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold; }
+    .main-contacts .call-us a {
+      text-decoration: none;
+      color: #202242; }
+    .main-contacts .call-us a:hover {
+      border-bottom: 2px dotted #202242; }
   .main-contacts .chat-us {
     display: block;
     margin-right: 20px;
@@ -104,6 +118,9 @@ a.btn {
     font-weight: 600;
     font-size: 14px;
     background-color: #ffe13e; }
+    .main-contacts .chat-us:hover {
+      background-color: #202242;
+      color: #ffe13e; }
 
 /*------------╨Я╤А╨╕╨▓╨╡╤В╤Б╤В╨▓╨╕╨╡------------*/
 .welcome {
@@ -113,7 +130,8 @@ a.btn {
   background-size: cover;
   color: #fff; }
   .welcome select, .welcome input[type="submit"] {
-    font-weight: bold; }
+    font-weight: bold;
+    cursor: pointer; }
   .welcome select {
     font-size: 18px; }
   .welcome input[type="submit"] {
@@ -129,7 +147,7 @@ a.btn {
   content: '';
   display: block;
   width: 105px;
-  height: 110px;
+  height: 113px;
   margin: 60px auto;
   background: url("circles.png") center/cover no-repeat; }
 
@@ -238,7 +256,7 @@ a.btn {
     text-align: center; }
   .features h2 {
     padding-bottom: 25px;
-    font-size: 48px; }
+    /* font-size: 48px; */ }
   .features em {
     display: block;
     margin-bottom: 85px;
@@ -326,6 +344,7 @@ a.btn {
   padding-bottom: 40px;
   font-family: 'Crete Round', Georgia, serif;
   font-style: italic;
+  font-weight: normal;
   font-size: 14px;
   color: #a4a4a4; }
 
@@ -345,13 +364,14 @@ a.btn {
   .pricing p {
     font-size: 18px;
     color: #67687b; }
-  .pricing a.pricing-more {
-    width: 235px;
-    padding: 30px 50px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #202242;
-    background-color: #ffe13e; }
+
+.pricing-more {
+  width: 235px;
+  padding: 30px 50px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #202242;
+  background-color: #ffe13e; }
 
 /*-----------╨Я╨╛╨┤╨▓╨░╨╗----------*/
 .main-footer {
@@ -433,6 +453,17 @@ a.btn {
     margin: 0 auto 15px;
     background: url("circles.png") center/35px no-repeat;
     transform: rotate(-15deg); }
+
+.footer-contacts {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center; }
+  .footer-contacts a {
+    display: inline-block;
+    padding: 0 10px;
+    /* border-right: 1px dotted rgba(255, 255, 255, 0.5); */ }
+  .footer-contacts .email {
+    border-right: 1px dotted rgba(255, 255, 255, 0.5); }
 
 .back-to-top {
   position: absolute;
