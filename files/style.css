@@ -1,0 +1,281 @@
+/*---------TO DO:----------------*/
+/*
+1. В социконках вставить ссылки на собственно соцсети.
+2. Заменить данные на реальные.
+3. Картинка в шапке при размере монитора около 900пикселей оказывается слишком маленькой.
+4. Найти способ сделать список контактов более аккуратным и по центру.
+5. Добавить на 700 пикселе остановку у медиазапросов, чтобы блоки навыков тоже красиво смотрелись.
+	5.1. Поставить там отступы так, стобы в виде колонки блоки не сливались.
+6. Отступ сверху сделать таким же, как минимальный с боков.
+7. Привести в порядок сам код и возможно (если очень хочется идеал) переименовать классы
+8. Используемы толщины шрифтов добавить в хтмл!!!
+*/
+/*----------END TO DO------------*/
+* {
+	padding:0;
+	margin: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+body {
+	background: #f1f1f1;
+	/*
+	Шрифты специально с засечками, чтобы было видно, если где упадет нужный.
+	Не забыть заменить на ариал и без засечек!
+	*/
+	font-family: 'Roboto','Arial', sans-serif; 
+	font-size: 14px;
+	padding: 15px; /*Чтобы при скачках размеров было красиво*/
+}
+p {
+	margin: 8px 0;
+}
+p, li {
+	/* color: #8f8f8f; */
+	color: #646464;
+	font-weight: 300;
+	line-height: 1.5em;
+}
+main {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+/*возможно этот паддинг нужно сделать отдельной строкой*/
+section, footer {
+	margin: 0 8px 16px;
+	padding: 30px;
+
+	//*border-radius: 10px;*/
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+}
+section{
+	background-color: #fff;
+}
+
+
+footer {
+/*Убедиться, что цвет фона совпадает с первоначальным цветом темного текста*/
+	background: /* #1e1e1e; */#282828;
+	color: white; /*временно*/
+}
+h1, h2, h3 {
+	color: #171717;
+}
+h1 {
+	font-weight: 400;
+	font-size: 24px;
+	/* text-transform: uppercase; */
+}
+h2 {
+/* 	background: rgba(82, 191, 0, 0.1);
+ */	display: block;
+	padding: 3px;
+	border-radius: 5px;
+	/* display: inline-block; */
+	/*включить если непременно нужно сделать длиной в заголовок*/
+	/* font-weight: regular; */
+/* 	text-transform: uppercase;
+ */}
+h2::after {
+	content: '';
+	display: block;
+	width: 100%;
+	margin-top: 5px;
+	border-bottom: 1px solid #52bf00;
+	opacity: 0.5;
+}
+h2, h3 {
+	font-weight: 500;
+}
+
+/*----------Классы и отдельные зоны------------*/
+
+.sidebar {
+	width: 33.3%;
+	float: left;
+}
+.main-info {
+	width: 66.7%;
+	float: left;
+}
+
+/*---------------Бейдж-----------------*/
+
+.about-badge {
+	position: relative;
+	overflow: hidden;
+	padding-top: 200px;
+}
+.badge-description {
+	/* padding: 30px; */
+	margin: 0 auto;
+	text-align: center; 
+	
+	position: relative;
+	z-index: 100;
+}
+.badge-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 325px;
+	
+	background: grey url("bg.png") no-repeat;
+}
+.badge-bg::before{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 200px;
+	top: 85%;
+	background-color: white;
+	transform: skew(0deg, 11deg);
+}
+.badge-bg::after{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 200px;
+	top: 85%;
+	background-color: white;
+	transform: skew(0deg, -11deg);
+}
+.photo {
+	display: block;
+	position: relative;
+   /* 	width: 150px;
+	height: 150px; */
+	margin: 0 auto 10px;
+	border: 5px white solid;
+	border-radius: 50%;
+}
+.position {
+	color: #52bf00;
+}
+.about-contacts {
+	margin: 15px 0 0;
+	font-size: 16px;
+	text-align: left;
+}
+.about-contacts li {
+	margin: 5px;
+	list-style: disk inside url("mark2.png");
+}
+.about-contacts .highlight {
+	font-weight: 500;
+	color: #171717;
+
+}
+
+/*---------------------Портфолио------------------------*/
+
+.portfolio-works, .skills{
+	display: flex;
+	flex-flow: row wrap;
+}
+.portfolio-works {
+	padding-top: 15px;
+}
+
+.item {
+	position: relative;
+	
+	width: 265px;
+	height: 475px;
+	margin: 8px;
+	flex: 1 1 250px;
+	overflow: hidden;
+	
+	border: 1px solid lightgray;
+
+}
+.item-image {
+	width: 100%;
+	height: auto; /*нужно чтобы не перефигачивал пропорции картинки*/
+}
+.description {
+	position: absolute;
+	top: 90%; /*высота строки плюс отступы!*/
+	width: 100%;
+	padding: 15px;
+	background-color: white;
+	transition: top 0.3s;
+	
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+.item:hover .description {
+	top: 60%;
+	transition: top 0.7s;
+}
+
+/*-------------------Блок навыков------------------------*/
+
+/* .code-skills, .languages {
+	border: 1px dotted grey;
+} */
+.code-skills {
+	padding-right: 15px;
+}
+.languages {
+	padding-left: 15px;
+}
+.skills > div {
+	margin-right: 15px;
+	flex: 1;
+	justify-content: space-between;
+}
+.skillbox {
+	height: 10px;
+	background: #f1f1f1;
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);	
+	border-radius: 10px;
+}
+.html-filled, .css-filled, .js-filled, .ps-filled, .ru-filled, .en-filled, .fr-filled {
+	background: #52bf00;
+}
+.html-filled {
+	width: 85%;
+}
+.css-filled {
+	width: 60%;
+}
+.js-filled {
+	width: 30%;
+}
+.ps-filled {
+	width: 95%;
+}
+.ru-filled {
+	width: 100%;
+}
+.en-filled {
+	width: 80%;
+}
+.fr-filled {
+	width: 20%;
+}
+/*-------------------Подвал-----------------------*/
+footer p{
+	margin: 0;
+	text-align: right;
+	color: #c1c1c1;
+}
+.social-footer {
+	display: none;
+}
+/*------------Маленький-маленький раздел с медиа----------*/
+@media screen and (max-width: 900px){
+	.sidebar, 
+	.main-info {
+	width: 100%;
+	float: none;
+	}
+	.about-contacts{
+		margin: inherit auto;
+	}
+}
