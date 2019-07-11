@@ -53,7 +53,10 @@ a.btn {
 	text-decoration: none;
 	text-align: center;
 }
-
+a.btn:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+	color: $maguwo_blue
+}
 .visually-hidden {
 	position: absolute;
 	width: 1px;
@@ -67,7 +70,7 @@ a.btn {
 
 /*--------------Шапка--------------*/
 .main-header {
-	height: 147px;
+	min-height: 147px;
 	background-color: #fff;
 	
 	.container {
@@ -78,15 +81,18 @@ a.btn {
 }
 .main-nav {
 	display: flex;
-	flex-grow: 1;
+	flex-grow: 2;
 	justify-content: space-between;
 	align-items: center;
 }
-.site-nav {
-	padding: 0 10px;
+.main-nav .site-nav {
+	/* padding: 0 10px; */
+	display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 	li{
 		display: inline-block;
-		margin-right: 40px;
+		margin: 0 20px;
 	}
 	a{
 		font-size: 16px;
@@ -103,6 +109,8 @@ a.btn {
 
 
 .main-contacts {
+	flex-grow: 1;
+	flex-shrink: 0;
 	padding: 32px 0 30px 50px;
 	border-left: 1px solid #ebebeb;
 	&>div{
@@ -113,15 +121,24 @@ a.btn {
 		margin-bottom: 15px;
 		font-weight: 600;
 		font-size: 12px;
+	}
 		
-		&.call-us {
-			margin: 3px 0;
-			padding-top: 8px;
-			padding-left: 20px;
-			border-left: 1px solid rgba(32,34,66,0.31);
-			font-family: Arial, sans-serif;
-			font-size: 24px;
-			font-weight: bold;
+	.call-us {
+		margin: 3px 0;
+		padding-top: 8px;
+		padding-left: 20px;
+		border-left: 1px solid rgba(32,34,66,0.31);
+		
+		font-family: Arial, sans-serif;
+		font-size: 24px;
+		font-weight: bold;
+
+		a{
+			text-decoration: none;
+			color: $maguwo_blue;
+		}
+		a:hover{
+			border-bottom: 2px dotted $maguwo_blue;
 		}
 	}
 	.chat-us {
@@ -132,6 +149,11 @@ a.btn {
 		font-weight: 600;
 		font-size: 14px;
 		background-color: $maguwo_yellow;
+		
+		&:hover{
+			background-color: $maguwo_blue;
+			color: $maguwo_yellow;
+		}
 	}
 }
 
@@ -152,6 +174,7 @@ a.btn {
 	
 	select, input[type="submit"] {
 		font-weight: bold;
+		cursor: pointer;
 	}
 	select {
 		font-size: 18px;
@@ -172,7 +195,7 @@ a.btn {
 	content:'';
 	display: block;
 	width: 105px;
-	height: 110px;
+	height: 113px;
 	margin: 60px auto;
 	background: url('circles.png') center/cover no-repeat;
 }
@@ -315,7 +338,7 @@ a.btn {
 	}
 	h2 {
 		padding-bottom: 25px;
-		font-size: 48px;
+		/* font-size: 48px; */
 	}
 	em {
 		display: block;
@@ -426,6 +449,7 @@ a.btn {
 	padding-bottom: 40px;
 	font-family: 'Crete Round', Georgia, serif;
 	font-style: italic;
+	font-weight: normal;
 	font-size: 14px;
 	color: #a4a4a4;
 }
@@ -451,14 +475,14 @@ a.btn {
 		font-size: 18px;
 		color: #67687b;
 	}
-	a.pricing-more{
-		width: 235px;
-		padding: 30px 50px;
-		font-size: 18px;
-		font-weight: bold;
-		color: $maguwo_blue;
-		background-color: $maguwo_yellow;
-	}
+}
+.pricing-more{
+	width: 235px;
+	padding: 30px 50px;
+	font-size: 18px;
+	font-weight: bold;
+	color: $maguwo_blue;
+	background-color: $maguwo_yellow;
 }
 
 
@@ -562,6 +586,20 @@ a.btn {
 		background: url('circles.png') center/35px no-repeat;
 		transform: rotate(-15deg);
 	}
+}
+.footer-contacts {
+	margin: 0 auto;
+	width: 50%;
+	text-align: center;
+	a{
+		display: inline-block;
+		padding: 0 10px;
+		/* border-right: 1px dotted rgba(255, 255, 255, 0.5); */
+	}
+	.email {
+		border-right: 1px dotted rgba(255, 255, 255, 0.5);
+	}
+	
 }
 .back-to-top {
 	   position: absolute;
