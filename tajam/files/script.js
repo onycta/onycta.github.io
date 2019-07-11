@@ -1,12 +1,21 @@
+
+/*---Слайдшоу из шапки---*/
+
  var slideIndex=1;
- makeSlidesSlide();
+ goSlide();
 /* showSlides(slideIndex); */ //вызывает самую первую итерацию
 
 
-function makeSlidesSlide(){
+function goSlide(){
 	showSlides(slideIndex);
-	var t = setTimeout(makeSlidesSlide, 6000);
-	
+	var t = setTimeout(goSlide, 7000);
+	/*
+	Мини-функция, единственное назначение котороой - вызывать другую функцию
+	с определенной отсрочкой. Это костыль, чтобы избежать наслаивания отсрочек 
+	(которое приводило к тому, что после кучи нажатий на кнопки (функция currentSlide)
+	новый слайд показывался секунд примерно половину).
+	Иными словами, при нажатии на кнопку старая функция не останавливалась, зато запускалась новая.
+	*/
 }
 
 
@@ -34,6 +43,8 @@ function showSlides(n) {
   /* var t = setTimeout(showSlides, 5000); *///раз запущенная, функция вызывает сама себя с отсрочкой 
 } 
 
+
+/*---Каруселька с отзывами---*/
 
 var testimonialIndex = 3;
 showTestimonial(testimonialIndex);

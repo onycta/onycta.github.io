@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="15" height="8" viewBox="0 0 15 8">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-size: 36.51px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-family: "Simplifica";
+      }
+    </style>
+  </defs>
+  <text transform="translate(-4) rotate(90) scale(0.97 0.99)" class="cls-1"><tspan class="cls-2">&gt;</tspan></text>
+</svg>
